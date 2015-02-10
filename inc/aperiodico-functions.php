@@ -44,6 +44,7 @@ function apsi_destacados() {
 	$cds = $custom['destacados'];
 	$destacados = array();
 	$destacados = explode("\r\n\r\n", $cds[0]);
+	if (count($destacados) == 0) return;
 	echo '<div class="destacados">';
 	echo '<hr>';
 	foreach ($destacados as $d) {
