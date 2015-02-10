@@ -1,9 +1,9 @@
 /*
-Theme Name: aperiodico2015
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
+Theme Name: Aperiodico Psicoanalitico 2015
+Theme URI: http://entrecasaestudio.com.ar
+Author: Francisco Demartino, para Entrecasa Estudio
+Author URI: http://www.entrecasaestudio.com.ar/
+Description:
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,7 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 1.0 Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -91,6 +91,7 @@ template {
 
 a {
 	background-color: transparent;
+	text-decoration: none;
 }
 
 a:active,
@@ -270,9 +271,8 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-size: 16px;
-	font-size: 1rem;
+	color: #424242;
+	font-size: 12px;
 	line-height: 1.5;
 }
 
@@ -360,7 +360,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #FEFCF6;
 }
 
 blockquote:before,
@@ -498,19 +498,6 @@ textarea {
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
-
-a:visited {
-	color: purple;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
-}
 
 a:focus {
 	outline: thin dotted;
@@ -549,6 +536,7 @@ a:active {
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+
 	float: left;
 	position: absolute;
 	top: 1.5em;
@@ -740,10 +728,6 @@ a:active {
 	display: block;
 }
 
-.hentry {
-	margin: 0 0 1.5em;
-}
-
 .byline,
 .updated:not(.published) {
 	display: none;
@@ -886,4 +870,98 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+
+.entry-title .numero,
+.site-title a
+{
+	color: #DAB045;
+	font-weight: normal;
+}
+
+.entry-title .titulo {
+	color: #424242;
+	font-weight: normal;
+}
+.entry-title {
+	margin-bottom: 48px;
+}
+
+article {
+	text-transform: uppercase;
+}
+article .thumb {
+	float: left;
+	width: 500px;
+}
+
+article .thumb img {
+	height: 708px;
+	width: 500px;
+	border: 1px solid #DAB045;
+}
+
+article .right {
+	float: left;
+	width: 540px;
+	margin-left: 40px;
+}
+article {
+	background: #FBF7EC;
+	padding: 36px 80px;
+}
+
+#content {
+	margin: 0 10px;
+}
+
+.destacados {
+	margin: 48px 0;
+}
+.destacados hr {
+	color: #DAB045;
+	background-color: #DAB045;
+	height: 1px;
+	margin: 2px 0;
+}
+.destacados div {
+	margin: 4px 0;
+}
+.destacados .titulo {
+	font-size: 18px;
+}
+.destacados .autor {
+	color: #7a7a7a;
+	font-size: 14px;
+}
+
+.boton {
+	width: 140px;
+	height: 36px;
+	line-height: 36px;
+	text-align:center;
+	color: #7A7A7A;
+	border: 1px solid #DAB045;
+	letter-spacing: 1px;
+	margin: 6px 0px;
+}
+.flecha {
+	color: #7a7a7a;
+	position: relative;
+}
+
+.flecha:before {
+	content: "▶";
+	position: absolute;
+	left: -12px;
+	line-height: 18px;
+
+	font-size: 10px;
+	color: #DAB045;
+}
+
+#page {
+	margin: 0 auto;
+	width: 1280px;
 }
