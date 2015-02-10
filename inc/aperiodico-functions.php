@@ -19,7 +19,7 @@ function apsi_titulo() {
 	printf('<h1 class="entry-title">
 				<a href="%s" rel="bookmark">
 					<span class="numero">N°%s</span>
-				</a>
+				</a><br/>
 				<a href="%s" rel="bookmark">
 					<span class="titulo">%s</span>
 				</a>
