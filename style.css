@@ -931,6 +931,11 @@ article {
 .destacados .titulo {
 	font-size: 18px;
 }
+
+.single .destacados .titulo {
+	font-size: 20px;
+}
+
 .destacados .autor {
 	color: #7a7a7a;
 	font-size: 14px;
@@ -947,8 +952,10 @@ article {
 	margin: 6px 0px;
 }
 .flecha {
-	color: #7a7a7a;
 	position: relative;
+}
+.flecha.escriben {
+	color: #7a7a7a;
 }
 
 .flecha:before {
@@ -961,6 +968,24 @@ article {
 	color: #DAB045;
 }
 
+.single .art .titulo.flecha:before {
+	line-height: 24px;
+}
+
+.single .sumario .art .titulo {
+	color: #424242;
+	font-size: 16px;
+	margin-bottom: 6px;
+}
+
+.single .sumario .art .autor {
+	color: #7A7A7A;
+	font-size: 12px;
+}
+
+.sumario .art {
+	margin-top: 36px;
+}
 #page {
 	margin: 0 auto;
 	width: 1280px;

@@ -23,7 +23,7 @@ function apsi_escriben() {
 	$ces = $custom['escriben'];
 	$escriben = array();
 	$escriben = explode("\n", $ces[0]);
-	echo '<div class="flecha">Escriben:</div>';
+	echo '<div class="flecha escriben">Escriben:</div>';
 	$primero = true;
 
 	foreach ($escriben as $autor) {
@@ -55,6 +55,26 @@ function apsi_destacados() {
 			<div class="autor"><?php echo $d[1];?></div>
 		</div>
 		<hr>
+		<?php
+	}
+
+	echo '</div>';
+}
+
+function apsi_sumario() {
+	$custom = get_post_custom();
+	$csm = $custom['sumario'];
+	$sumario = array();
+	$sumario = explode("\r\n\r\n", $csm[0]);
+	echo '<div class="sumario">';
+	foreach ($sumario as $s) {
+		$s = explode("\r\n", $s);
+		if (!$s[0]) continue;
+		?>
+		<div class="art">
+			<div class="titulo flecha"><?php echo $s[0];?></div>
+			<div class="autor"><?php echo $s[1];?></div>
+		</div>
 		<?php
 	}
 
