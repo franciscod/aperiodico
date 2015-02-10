@@ -42,9 +42,9 @@ function apsi_escriben() {
 function apsi_destacados() {
 	$custom = get_post_custom();
 	$cds = $custom['destacados'];
+	if (!trim($cds[0])) return;
 	$destacados = array();
 	$destacados = explode("\r\n\r\n", $cds[0]);
-	if (count($destacados) == 0) return;
 	echo '<div class="destacados">';
 	echo '<hr>';
 	foreach ($destacados as $d) {
