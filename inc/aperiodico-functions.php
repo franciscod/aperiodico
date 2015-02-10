@@ -31,7 +31,7 @@ function apsi_escriben() {
 		$aut = trim($autor);
 		if (!$aut) continue;
 
-		echo (!$primero ? ' - ' : '').'<span class="autor">'.$aut.'</span>';
+		echo (!$primero ? ' • ' : '').'<span class="autor">'.$aut.'</span>';
 
 		if ($primero) {
 			$primero = false;
