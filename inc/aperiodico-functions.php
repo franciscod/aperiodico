@@ -1,6 +1,14 @@
 <?php
 add_theme_support( 'post-thumbnails' );
 
+function split2lines($string) {
+	return $lines = preg_split( '/\r\n\r\n|\r\r|\n\n/', $string );
+}
+
+function splitlines($string) {
+	return $lines = preg_split( '/\r\n|\r|\n/', $string );
+}
+
 function apsi_titulo() {
 	$re = "/(\d+): (.*)/";
 	$title = the_title_attribute(array('echo' => false));
@@ -22,7 +30,7 @@ function apsi_escriben() {
 	$custom = get_post_custom();
 	$ces = $custom['escriben'];
 	$escriben = array();
-	$escriben = explode("\n", $ces[0]);
+	$escriben = splitlines($ces[0]);
 	echo '<div class="flecha escriben">Escriben:</div>';
 	$primero = true;
 
@@ -44,16 +52,16 @@ function apsi_destacados() {
 	$cds = $custom['destacados'];
 	if (!trim($cds[0])) return;
 	$destacados = array();
-	$destacados = explode("\r\n\r\n", $cds[0]);
+	$destacados = split2lines($cds[0]);
 	echo '<div class="destacados">';
 	echo '<hr>';
 	foreach ($destacados as $d) {
-		$d = explode("\r\n", $d);
-		if (!$d[0]) continue;
+		$l = splitlines($d);
+		if (!$l[0]) continue;
 		?>
 		<div class="destacado">
-			<div class="titulo"><?php echo $d[0];?></div>
-			<div class="autor"><?php echo $d[1];?></div>
+			<div class="titulo"><?php echo $l[0];?></div>
+			<div class="autor"><?php echo $l[1];?></div>
 		</div>
 		<hr>
 		<?php
@@ -66,15 +74,15 @@ function apsi_sumario() {
 	$custom = get_post_custom();
 	$csm = $custom['sumario'];
 	$sumario = array();
-	$sumario = explode("\r\n\r\n", $csm[0]);
+	$sumario = split2lines($csm[0]);
 	echo '<div class="sumario">';
 	foreach ($sumario as $s) {
-		$s = explode("\r\n", $s);
-		if (!$s[0]) continue;
+		$l = splitlines($s);
+		if (!$l[0]) continue;
 		?>
 		<div class="art">
-			<div class="titulo flecha"><?php echo $s[0];?></div>
-			<div class="autor"><?php echo $s[1];?></div>
+			<div class="titulo flecha"><?php echo $l[0];?></div>
+			<div class="autor"><?php echo $l[1];?></div>
 		</div>
 		<?php
 	}
