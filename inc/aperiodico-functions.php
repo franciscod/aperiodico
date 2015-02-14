@@ -1,6 +1,10 @@
 <?php
 add_theme_support( 'post-thumbnails' );
 
+remove_action( 'wp_head', 'wp_generator' ) ;
+remove_action( 'wp_head', 'wlwmanifest_link' ) ;
+remove_action( 'wp_head', 'rsd_link' ) ;
+add_filter( 'pre_comment_content', 'esc_html' );
 add_filter('show_admin_bar', '__return_false');
 
 function split2lines($string) {
