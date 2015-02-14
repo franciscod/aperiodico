@@ -1,6 +1,8 @@
 <?php
 add_theme_support( 'post-thumbnails' );
 
+add_filter('show_admin_bar', '__return_false');
+
 function split2lines($string) {
 	return $lines = preg_split( '/\r\n\r\n|\r\r|\n\n/', $string );
 }

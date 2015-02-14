@@ -360,7 +360,7 @@ html {
 }
 
 body {
-	background: #FEFCF6;
+	background: #FFFFFF;
 }
 
 blockquote:before,
@@ -871,7 +871,9 @@ object {
 .gallery-caption {
 	display: block;
 }
-
+/*----------------------
+custom aperiódico styles
+----------------------*/
 
 .entry-title .numero,
 .site-title a
@@ -988,7 +990,55 @@ article {
 .sumario .art {
 	margin-top: 36px;
 }
+
 #page {
 	margin: 0 auto;
 	width: 1280px;
+}
+
+#masthead.site-header {
+	width: 1280px;
+	background: #FFFFFF;
+	height:	90px;
+}
+
+
+.site-title, .main-navigation {
+	display: inline-block;
+}
+
+.site-header h1.site-title {
+	margin-top: 0;
+	margin-left: 90px;
+	margin-bottom: 0px;
+}
+
+.main-navigation {
+	width: initial;
+	float: none;
+	margin-left: 130px;
+	margin-bottom: 30px;
+	position: relative;
+	top: -11px;
+}
+
+.main-navigation .menu span {
+	margin-left: 66px;
+}
+.menu span.flecha:before {
+	color: #424242;
+	left: -16px;
+}
+.menu span.flecha {
+	color: #DAB045;
+	text-transform: uppercase;
+}
+
+body.home .site-header {
+	position: fixed;
+	top: 0px;
+	z-index: 9001;
+}
+body.home #content {
+	margin-top: 90px;
 }

@@ -6,6 +6,9 @@
  *
  * @package aperiodico2015
  */
+
+require get_template_directory() . '/inc/aperiodico-data.php';
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -22,14 +25,19 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'aperiodico2015' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-
-			<h1 class="site-title">LOGO <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		</div><!-- .site-branding -->
+		<h1 class="site-title">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg">
+			</a>
+		</h1>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'aperiodico2015' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php /* wp_nav_menu( array( 'theme_location' => 'primary' ) ); */ ?>
+			<span class="menu">
+				<?php foreach (array_keys($apsi_menu) as $m) {
+					?><span class="flecha <?php echo $m; ?>"><?php echo $apsi_menu[$m]; ?></span><?php
+				} ?>
+			</span>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
