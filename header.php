@@ -27,7 +27,7 @@ require get_template_directory() . '/inc/aperiodico-data.php';
 	<header id="masthead" class="site-header" role="banner">
 		<h1 class="site-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg">
+				<div class="logo">&nbsp;</div>
 			</a>
 		</h1>
 

@@ -1011,15 +1011,15 @@ article {
 	margin-top: 0;
 	margin-left: 90px;
 	margin-bottom: 0px;
+	float: left;
 }
 
 .main-navigation {
 	width: initial;
 	float: none;
 	margin-left: 130px;
-	margin-bottom: 30px;
+	margin-top: 36px;
 	position: relative;
-	top: -11px;
 }
 
 .main-navigation .menu span {
@@ -1041,4 +1041,54 @@ body.home .site-header {
 }
 body.home #content {
 	margin-top: 90px;
+}
+
+footer {
+	height: 240px;
+}
+
+footer b {
+	color: #DAB045;
+}
+.site-header .logo {
+	background: url('img/logo.svg');
+	width: 346px;
+	height: 63px;
+}
+.entrecasa i {
+	display: inline-block;
+	background: url('img/entrecasa.svg') no-repeat;
+	width: 32px;
+	height: 23px;
+	padding-bottom:10px;
+}
+
+footer .flecha {
+	color: #424242;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+footer .social div {
+	line-height: 20px;
+}
+
+footer .social div:before {
+	content: " ";
+	height: 17px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+footer .social .fb:before {
+	width: 12px;
+	background-image: url('img/fb.svg');
+	margin: 0 7px;
+}
+
+footer .social .tw:before {
+	width: 22px;
+	background-image: url('img/twitter.svg');
+	margin: 0 2px;
 }
