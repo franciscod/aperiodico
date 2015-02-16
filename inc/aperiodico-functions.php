@@ -15,12 +15,15 @@ function splitlines($string) {
 	return $lines = preg_split( '/\r\n|\r|\n/', $string );
 }
 
-function apsi_titulo() {
+function apsi_split_titulo($title) {
 	$re = "/(\d+): (.*)/";
-	$title = the_title_attribute(array('echo' => false));
 	$matches = array();
 	preg_match($re, $title, $matches);
-	list($orig, $numero, $titulo) = $matches;
+	return $matches;
+}
+function apsi_titulo() {
+	list($orig, $numero, $titulo) = apsi_split_titulo(the_title_attribute(array('echo' => false)));
+	
 	$link = esc_url( get_permalink());
 	printf('<h1 class="entry-title">
 				<a href="%s" rel="bookmark">

@@ -316,6 +316,7 @@ pre {
 	font-size: 0.9375rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
+
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
@@ -996,10 +997,14 @@ article {
 	width: 1280px;
 }
 
-#masthead.site-header {
+.site-header {
 	width: 1280px;
 	background: #FFFFFF;
 	height:	90px;
+}
+
+.site-header.desplegado {
+	height: 372px;
 }
 
 
@@ -1017,9 +1022,10 @@ article {
 .main-navigation {
 	width: initial;
 	float: none;
-	margin-left: 130px;
+	margin-left: 175px;
 	margin-top: 36px;
 	position: relative;
+	letter-spacing: 1px;
 }
 
 .main-navigation .menu span {
@@ -1043,11 +1049,12 @@ body.home #content {
 	margin-top: 90px;
 }
 
-footer {
+footer.site-footer {
 	height: 240px;
 }
 
-footer b {
+footer.site-footer b {
+	font-weight: normal;
 	color: #DAB045;
 }
 .site-header .logo {
@@ -1061,19 +1068,19 @@ footer b {
 	width: 32px;
 	height: 23px;
 	padding-bottom:10px;
+	position:relative;
+	top: 6px;
+	margin-right: 8px;
 }
 
-footer .flecha {
+footer.site-footer .flecha {
 	color: #424242;
+	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-footer .social div {
-	line-height: 20px;
-}
-
-footer .social div:before {
+footer.site-footer .social div:before {
 	content: " ";
 	height: 17px;
 	background-repeat: no-repeat;
@@ -1081,14 +1088,106 @@ footer .social div:before {
 	vertical-align: middle;
 }
 
-footer .social .fb:before {
+footer.site-footer .social .fb:before {
 	width: 12px;
 	background-image: url('img/fb.svg');
 	margin: 0 7px;
 }
 
-footer .social .tw:before {
+footer.site-footer .social .tw:before {
 	width: 22px;
 	background-image: url('img/twitter.svg');
 	margin: 0 2px;
+}
+
+.site-header .ediciones {
+	margin-top: 72px;
+}
+
+.site-header .ediciones .miniatura {
+	float: left;
+	display: inline-block;
+	margin-left: 90px;
+	width: 120px;
+	height: 168px;
+	background: white;
+	border: 1px solid #DAB045;
+}
+
+.site-header .ediciones .columnas {
+	float: left;
+	display: inline-block;
+	line-height: 26px;
+
+	margin-left: 40px;
+
+	column-count: 3;
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+
+	column-width: 300px;
+	-moz-column-width: 300px;
+	-webkit-column-width: 300px;
+
+	column-rule-width: 40px;
+	-moz-column-rule-width: 40px;
+	-webkit-column-rule-width: 40px;
+
+}
+
+.site-header .ediciones .edicion .num {
+	color: #DAB045;
+}
+.site-header .ediciones .edicion a {
+	color: #424242;
+}
+
+
+.site-footer {
+	padding-top: 40px;
+	line-height: 22px;
+}
+
+.site-footer .flecha {
+	margin-bottom: 20px;
+}
+
+.site-footer .flecha:before {
+	position: initial;
+	margin-right: 4px;
+}
+
+.site-footer > div {
+	float: left;
+}
+
+.site-footer .ed-ant {
+	width: 380px;
+	margin-left: 90px;
+}
+.site-footer .ed-ant span {
+	margin-bottom: 20px;
+}
+
+.site-footer .contacto {
+	width: 220px;
+	margin-left: 100px;
+}
+
+.site-footer .social {
+	width: 380px;
+	margin-top: 36px;
+	margin-left: 20px;
+}
+
+.site-footer .entrecasa {
+	padding-top: 50px;
+}
+
+.site-footer .contact-item, .site-footer .social div {
+	line-height: 24px;
+}
+
+.flecha {
+	letter-spacing: 1px;
 }
