@@ -143,9 +143,7 @@
 
 				function openHeader(cb) {
 					if (_h === null) {
-						if ($('body').hasClass('home')) {
-							$('body').animate({'margin-top': '372px'}, 400, 'ease');
-						}
+						$('body').animate({'margin-top': '372px'}, 400, 'ease');
 						$('.site-header').animate({'height': '372px'}, 400, 'ease', cb);
 					} else {
 						if (cb) cb();
@@ -153,9 +151,7 @@
 				}
 
 				function closeHeader(cb) {
-					if ($('body').hasClass('home')) {
-						$('body').animate({'margin-top': '90px'}, 400, 'ease');
-					}
+					$('body').animate({'margin-top': '90px'}, 400, 'ease');
 					$('.site-header').animate({'height': '90px'}, 400, 'ease', function() {
 						_h = null;
 						if (cb) cb();

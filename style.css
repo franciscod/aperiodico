@@ -1036,12 +1036,17 @@ article {
 	text-transform: uppercase;
 }
 
-body.home .site-header {
-	position: fixed;
+.site-header {
+	position: absolute;
 	top: 0px;
 	z-index: 9001;
 }
-body.home #content {
+
+body.home .site-header {
+	position: fixed;
+}
+
+body #content {
 	margin-top: 90px;
 }
 
