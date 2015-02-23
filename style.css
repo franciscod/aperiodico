@@ -1195,3 +1195,18 @@ footer.site-footer .social .tw:before {
 	background-size: cover;
 }
 
+.site-header {
+	border-image-slice:  0   0   90   0;
+	border-image-width:  0px 0px 45px 0px;
+	border-image-outset: 0px 9001px 45px 9001px;
+	border-image-repeat: stretch stretch;
+	border-image-source: url("img/gradient-top.png");
+}
+
+.site-footer {
+	border-image-slice:  90   0   0   0;
+	border-image-width:  45px 0px 0px 0px;
+	border-image-outset: 45px 9001px 0px 9001px;
+	border-image-repeat: stretch stretch;
+	border-image-source: url("img/gradient-bot.png");
+}
