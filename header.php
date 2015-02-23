@@ -45,7 +45,7 @@
 			'category' => 'ediciones',
 		));
 		$edicion = $ultima[0];
-		$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID));
+		$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID, 'full'));
 		$thumb_url = $thumb_data[0];
 		?>
 			<div class="miniatura" style="background-image: url('<?php echo $thumb_url; ?>')"></div>
@@ -58,7 +58,7 @@
 
 			foreach ($ediciones as $edicion) {
 				list($o, $num, $tit) = apsi_split_titulo($edicion->post_title);
-				$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID));
+				$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID, 'full'));
 				$thumb_url = $thumb_data[0];
 				$link = get_permalink($edicion->ID);
 
