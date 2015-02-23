@@ -6,7 +6,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="thumb">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail('full'); ?>
 	</div>
 	<div class="right">
 		<header class="entry-header">
