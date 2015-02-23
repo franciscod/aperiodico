@@ -45,7 +45,7 @@
 			'category' => 'ediciones',
 		));
 		$edicion = $ultima[0];
-		$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID, 'full'));
+		$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID));
 		$thumb_url = $thumb_data[0];
 		?>
 			<div class="miniatura" style="background-image: url('<?php echo $thumb_url; ?>')"></div>
@@ -56,11 +56,14 @@
 				'category' => 'ediciones',
 			));
 
+			$thumb_urls = array();
+
 			foreach ($ediciones as $edicion) {
 				list($o, $num, $tit) = apsi_split_titulo($edicion->post_title);
-				$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID, 'full'));
+				$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID));
 				$thumb_url = $thumb_data[0];
 				$link = get_permalink($edicion->ID);
+				$thumb_urls[] = $thumb_url;
 
 				echo "
 				<div class='edicion' data-thumb-url='$thumb_url'>
@@ -71,6 +74,10 @@
 				</div>";
 			}
 		?>
+			<script><?php $i=0; foreach ($thumb_urls as $thumb_url) { ?>
+				var imgPreloader<?php echo $i; ?> = new Image();
+				imgPreloader<?php echo $i++; ?>.src = '<?php echo $thumb_url; ?>';
+				<?php } ?></script>
 			</div>
 		</div>
 

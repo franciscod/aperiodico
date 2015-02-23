@@ -1,5 +1,6 @@
 <?php
 add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size(240, 366);
 
 remove_action( 'wp_head', 'wp_generator' ) ;
 remove_action( 'wp_head', 'wlwmanifest_link' ) ;
@@ -23,7 +24,7 @@ function apsi_split_titulo($title) {
 }
 function apsi_titulo() {
 	list($orig, $numero, $titulo) = apsi_split_titulo(the_title_attribute(array('echo' => false)));
-	
+
 	$link = esc_url( get_permalink());
 	printf('<h1 class="entry-title">
 				<a href="%s" rel="bookmark">
