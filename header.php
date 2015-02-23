@@ -32,9 +32,9 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<?php /* wp_nav_menu( array( 'theme_location' => 'primary' ) ); */ ?>
 			<span class="menu">
-				<span class="flecha ediciones">Ediciones</span>
-				<span class="flecha acerca">Acerca</span>
-				<span class="flecha contacto">Contacto</span>
+				<a href="#" class="flecha ediciones">Ediciones</a>
+				<a href="#" class="flecha acerca">Acerca</a>
+				<a href="#" class="flecha contacto">Contacto</a>
 			</span>
 		</nav><!-- #site-navigation -->
 
@@ -73,10 +73,84 @@
 		?>
 			</div>
 		</div>
+
+		<div class="seccion acerca">
+			<img class="edit" src=" <?php echo get_template_directory_uri(); ?>/img/edit_tendlarz.jpg">
+			<div class="texto">
+				El Aperiódico Psicoanalítico ha nacido hace 12 años causado por llevar el psicoanálisis de la orientación lacaniana a la comunidad. Especialmente a la comunidad no analítica. Hoy debo decir que esto es un hecho. No sólo que lo hemos logrado, sino que además numerosos analistas, coleccionan cada uno de estos números usándolos como referencias para su elaboración clínica. Estos efectos son el resultado, por un lado, la elección de temas monográficos y por otro, la calidad de los que han intervenido con sus artículos. La clínica contemporánea nos interesa y nos interroga constantemente. A ella debemos responder. Los invito a que no se detengan donde la lectura tiene sus consecuencias.
+				<br><br>
+				Edit TENDLARZ<br>
+				Directora
+			</div>
+		</div>
+
+		<div class="seccion contacto">
+			contacto
+		</div>
+
+
+
 		<script>
 			$('.columnas .edicion').on('mouseover', function (e) {
 				$('.miniatura').css('background-image', 'url("'+ $(this).data('thumb-url') +'")')
 			});
+
+			{ // header
+
+				var _h = null;
+
+				function openHeader(cb) {
+					if (_h === null) {
+						if ($('body').hasClass('home')) {
+							$('body').animate({'margin-top': '372px'}, 400, 'ease');
+						}
+						$('.site-header').animate({'height': '372px'}, 400, 'ease', cb);
+					} else {
+						cb();
+					}
+				}
+
+				function closeHeader(cb) {
+					if ($('body').hasClass('home')) {
+						$('body').animate({'margin-top': '90px'}, 400, 'ease');
+					}
+					$('.site-header').animate({'height': '90px'}, 400, 'ease', function() {
+						_h = null;
+						cb();
+					});
+				}
+
+				function fadeOutCurrent(cb){
+					if (_h !== null) {
+						var sec = $('.seccion').get(_h);
+						$(sec).fadeOut(400, cb);
+					} else {
+						cb();
+					}
+				}
+
+				function fadeIn(i, cb) {
+					var sec = $('.seccion').get(i);
+					$(sec).fadeIn(400, cb);
+					_h = i;
+				}
+
+				$('.menu a').click(function() {
+					var i = $(this).index();
+					if (i == _h) {
+						fadeOutCurrent(function() {
+							closeHeader();
+						});
+					} else {
+						openHeader(function() {
+							fadeOutCurrent(function() {
+								fadeIn(i);
+							});
+						})
+					}
+				})
+
+		}
 		</script>
 	</header><!-- #masthead -->
 

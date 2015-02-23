@@ -1003,11 +1003,6 @@ article {
 	height:	90px;
 }
 
-.site-header.desplegado {
-	height: 372px;
-}
-
-
 .site-title, .main-navigation {
 	display: inline-block;
 }
@@ -1028,14 +1023,15 @@ article {
 	letter-spacing: 1px;
 }
 
-.main-navigation .menu span {
+.main-navigation .menu a {
 	margin-left: 66px;
+	float: left;
 }
-.menu span.flecha:before {
+.menu a.flecha:before {
 	color: #424242;
 	left: -16px;
 }
-.menu span.flecha {
+.menu a.flecha {
 	color: #DAB045;
 	text-transform: uppercase;
 }
@@ -1209,4 +1205,25 @@ footer.site-footer .social .tw:before {
 	border-image-outset: 45px 9001px 0px 9001px;
 	border-image-repeat: stretch stretch;
 	border-image-source: url("img/gradient-bot.png");
+}
+
+
+
+
+.site-header .seccion {
+	display: none;
+}
+
+
+.acerca .edit {
+	height: 204px;
+	margin-left: 90px;
+	border: 1px solid #DAB045;
+	float: left;
+}
+.acerca .texto {
+	margin-left: 40px;
+	width: 650px;
+	float: left;
+	line-height: 1.7em;
 }
