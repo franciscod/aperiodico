@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * The header for our theme.
  *
@@ -37,8 +37,18 @@
 				<span class="flecha contacto">Contacto</span>
 			</span>
 		</nav><!-- #site-navigation -->
-		<div class="ediciones">
-			<div class="miniatura"></div>
+
+		<div class="seccion ediciones">
+		<?php
+		$ultima = get_posts(array(
+			'posts_per_page' => 1,
+			'category' => 'ediciones',
+		));
+		$edicion = $ultima[0];
+		$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID));
+		$thumb_url = $thumb_data[0];
+		?>
+			<div class="miniatura" style="background-image: url('<?php echo $thumb_url; ?>')"></div>
 			<div class="columnas">
 		<?php
 			$ediciones = get_posts(array(
@@ -63,6 +73,11 @@
 		?>
 			</div>
 		</div>
+		<script>
+			$('.columnas .edicion').on('mouseover', function (e) {
+				$('.miniatura').css('background-image', 'url("'+ $(this).data('thumb-url') +'")')
+			});
+		</script>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

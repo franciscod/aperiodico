@@ -1100,7 +1100,7 @@ footer.site-footer .social .tw:before {
 	margin: 0 2px;
 }
 
-.site-header .ediciones {
+.site-header .seccion {
 	margin-top: 72px;
 }
 
@@ -1110,7 +1110,6 @@ footer.site-footer .social .tw:before {
 	margin-left: 90px;
 	width: 120px;
 	height: 168px;
-	background: white;
 	border: 1px solid #DAB045;
 }
 
@@ -1191,3 +1190,8 @@ footer.site-footer .social .tw:before {
 .flecha {
 	letter-spacing: 1px;
 }
+
+.miniatura {
+	background-size: cover;
+}
+
