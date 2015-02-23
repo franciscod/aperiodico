@@ -1049,7 +1049,7 @@ footer.site-footer {
 	height: 240px;
 }
 
-footer.site-footer b {
+.contact-item b {
 	font-weight: normal;
 	color: #DAB045;
 }
@@ -1076,7 +1076,7 @@ footer.site-footer .flecha {
 	font-weight: bold;
 }
 
-footer.site-footer .social div:before {
+.social div:before {
 	content: " ";
 	height: 17px;
 	background-repeat: no-repeat;
@@ -1084,13 +1084,13 @@ footer.site-footer .social div:before {
 	vertical-align: middle;
 }
 
-footer.site-footer .social .fb:before {
+.social .fb:before {
 	width: 12px;
 	background-image: url('img/fb.svg');
 	margin: 0 7px;
 }
 
-footer.site-footer .social .tw:before {
+.social .tw:before {
 	width: 22px;
 	background-image: url('img/twitter.svg');
 	margin: 0 2px;
@@ -1156,10 +1156,13 @@ footer.site-footer .social .tw:before {
 	float: left;
 }
 
+.site-header .ed-ant,
 .site-footer .ed-ant {
 	width: 380px;
 	margin-left: 90px;
 }
+
+.site-header .ed-ant span,
 .site-footer .ed-ant span {
 	margin-bottom: 20px;
 }
@@ -1169,16 +1172,19 @@ footer.site-footer .social .tw:before {
 	margin-left: 100px;
 }
 
+.site-header .social,
 .site-footer .social {
 	width: 380px;
 	margin-top: 36px;
 	margin-left: 20px;
 }
 
+.site-header .entrecasa,
 .site-footer .entrecasa {
 	padding-top: 50px;
 }
 
+.site-header .contact-item, .site-footer .social div,
 .site-footer .contact-item, .site-footer .social div {
 	line-height: 24px;
 }
@@ -1226,4 +1232,25 @@ footer.site-footer .social .tw:before {
 	width: 650px;
 	float: left;
 	line-height: 1.7em;
+}
+
+.upperbold {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.site-header .hcleft, .site-header .ed-ant {
+	float:left;
+}
+
+.site-header .hcleft {
+	margin-left: 200px;
+}
+
+.site-header .contacto {
+	margin-left: 40px;
+}
+
+.site-header .seccion.contact {
+	line-height: 2em;
 }

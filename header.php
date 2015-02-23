@@ -91,8 +91,31 @@
 			</div>
 		</div>
 
-		<div class="seccion contacto">
-			contacto
+		<div class="seccion contact">
+			<div class="hcleft">
+				<div class="contacto">
+					<div class="contact-item"><b>MAIL: </b>etendlar@fibertel.com.ar</div>
+					<div class="contact-item"><b>TELÉFONO: </b>(+54 11) 4771 1625</div>
+
+				</div>
+
+				<div class="social">
+					<div class="fb">Facebook/Aperiódico.Psicoanalítico</div>
+					<div class="tw">Twitter/Aperiódico.Psicoanalítico</div>
+				</div>
+			</div>
+
+			<div class="ed-ant">
+				<div class="upperbold">Ediciones Anteriores</div>
+				<span>
+					Para conseguir ediciones anteriores puede contactarse con la redacción del Aperiódico Psicoanalítico:
+				</span>
+				<div class="contact-item"><b>MAIL: </b>etendlar@fibertel.com.ar</div>
+				<div class="contact-item"><b>TELÉFONO: </b>(+54 11) 4771 1625</div>
+
+				<small>Envíos a todo el mundo previo depósito bancario. Precio de las ediciones actualizado al valor de la última edición más costos de envío</small>
+			</div>
+
 		</div>
 
 
@@ -105,6 +128,18 @@
 			{ // header
 
 				var _h = null;
+				var _l = false;
+
+				function grabLockOrStop(cb) {
+					if (_l) return;
+					_l = true;
+					if (cb) cb();
+				}
+
+				function releaseLock(cb) {
+					_l = false;
+					if (cb) cb();
+				}
 
 				function openHeader(cb) {
 					if (_h === null) {
@@ -113,7 +148,7 @@
 						}
 						$('.site-header').animate({'height': '372px'}, 400, 'ease', cb);
 					} else {
-						cb();
+						if (cb) cb();
 					}
 				}
 
@@ -123,7 +158,7 @@
 					}
 					$('.site-header').animate({'height': '90px'}, 400, 'ease', function() {
 						_h = null;
-						cb();
+						if (cb) cb();
 					});
 				}
 
@@ -132,7 +167,7 @@
 						var sec = $('.seccion').get(_h);
 						$(sec).fadeOut(400, cb);
 					} else {
-						cb();
+						if (cb) cb();
 					}
 				}
 
@@ -145,15 +180,23 @@
 				$('.menu a').click(function() {
 					var i = $(this).index();
 					if (i == _h) {
-						fadeOutCurrent(function() {
-							closeHeader();
+						grabLockOrStop(function() {
+							fadeOutCurrent(function() {
+								closeHeader(function() {
+									releaseLock();
+								});
+							});
 						});
 					} else {
-						openHeader(function() {
-							fadeOutCurrent(function() {
-								fadeIn(i);
+						grabLockOrStop(function() {
+							openHeader(function() {
+								fadeOutCurrent(function() {
+									fadeIn(i, function() {
+										releaseLock()
+									});
+								});
 							});
-						})
+						});
 					}
 				})
 
