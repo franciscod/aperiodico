@@ -1305,8 +1305,12 @@ footer.site-footer .flecha {
 	background-color: white;
 	color: #424242;
 }
-.single article .menu.secciones .boton:not(:first-child) {
-	margin-left: 16px;
+.single article .menu.secciones .boton:first-of-type {
+	float: left;
+}
+
+.single article .menu.secciones .boton:last-of-type {
+	float: right;
 }
 
 .oculto {
@@ -1317,7 +1321,7 @@ footer.site-footer .flecha {
 	float: left;
 	text-align: center;
 	width: 300px;
-	height: 425px;
+	height: 450px;
 }
 
 .todas .edicion:nth-child(3n+2) {
@@ -1326,6 +1330,8 @@ footer.site-footer .flecha {
 
 .todas .edicion img {
 	border: 1px solid #DAB045;
+	width: 244px;
+	height: 345px;
 }
 .todas .edicion.actual img {
 	border-width: 4px;
@@ -1338,4 +1344,25 @@ footer.site-footer .flecha {
 	color: #DAB045;
 	margin-top: 10px;
 	margin-bottom: 6px;
+}
+
+.todas {
+	padding-top: 20px;
+}
+.todas hr {
+	border: solid 1px #DAB045;
+	border-width: 1px 0px 1px 0px;
+	color: transparent;
+	background-color: transparent;
+	height: 2px;
+}
+.todas div.flecha {
+	margin-left: 24px;
+	font-size: 24px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.todas div.flecha:before {
+	line-height: 38px;
 }

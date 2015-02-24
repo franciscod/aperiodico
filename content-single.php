@@ -23,6 +23,7 @@
 			<div class="menu secciones">
 				<a class="boton seleccionado">SUMARIO</a>
 				<a class="boton">EDITORIAL</a>
+				<br style="clear: left;" />
 			</div>
 			<div class="sumario">
 				<?php apsi_destacados(); ?>
@@ -43,9 +44,11 @@
 		</footer><!-- .entry-footer -->
 	</div>
 	<br style="clear: left;" />
+
 </article><!-- #post-## -->
 
 <article class="todas">
+	<hr>
 	<div class="flecha">Todas las ediciones</div>
 	<div class="eds">
 		<?php
