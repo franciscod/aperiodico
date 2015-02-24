@@ -121,11 +121,12 @@
 
 
 		<script>
-			$('.columnas .edicion').on('mouseover', function (e) {
-				$('.miniatura').css('background-image', 'url("'+ $(this).data('thumb-url') +'")')
-			});
 
-			{ // header
+			 // header
+			$(function() {
+				$('.columnas .edicion').on('mouseover', function (e) {
+					$('.miniatura').css('background-image', 'url("'+ $(this).data('thumb-url') +'")')
+				});
 
 				var _h = null;
 				var _l = false;
@@ -162,6 +163,7 @@
 					if (_h !== null) {
 						var sec = $('.seccion').get(_h);
 						$(sec).fadeOut(400, cb);
+						$($('.menu a').get(_h)).removeClass('selected');
 					} else {
 						if (cb) cb();
 					}
@@ -169,13 +171,13 @@
 
 				function fadeIn(i, cb) {
 					var sec = $('.seccion').get(i);
-					$(sec).fadeIn(400, cb);
 					_h = i;
+					$($('.menu a').get(_h)).addClass('selected');
+					$(sec).fadeIn(400, cb);
 				}
 
-				$('.menu a').click(function() {
-					var i = $(this).index();
-					if (i == _h) {
+				function foldHeader() {
+					if (_h !== null) {
 						grabLockOrStop(function() {
 							fadeOutCurrent(function() {
 								closeHeader(function() {
@@ -183,6 +185,16 @@
 								});
 							});
 						});
+					}
+				}
+
+				$('#content').click(foldHeader);
+				$('#colophon').click(foldHeader);
+
+				$('.menu a').click(function() {
+					var i = $(this).index();
+					if (i == _h) {
+						foldHeader();
 					} else {
 						grabLockOrStop(function() {
 							openHeader(function() {
@@ -196,7 +208,7 @@
 					}
 				})
 
-		}
+		});
 		</script>
 	</header><!-- #masthead -->
 

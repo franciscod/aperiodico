@@ -1244,18 +1244,39 @@ footer.site-footer .flecha {
 	font-weight: bold;
 }
 
-.site-header .hcleft, .site-header .ed-ant {
+.site-header .contact .hcleft, .site-header .ed-ant {
 	float:left;
 }
 
-.site-header .hcleft {
+.site-header .contact .hcleft {
 	margin-left: 200px;
 }
 
-.site-header .contacto {
+.site-header .contact .contacto {
 	margin-left: 40px;
 }
 
 .site-header .seccion.contact {
 	line-height: 2em;
+}
+
+.site-header .menu a.flecha, .site-header .menu a.flecha:before {
+	-webkit-transition: 400ms all;
+	        transition: 400ms all;
+}
+
+.site-header .menu a.selected {
+	color: #424242;
+}
+
+.site-header .menu a.flecha.selected:before {
+	            color: #DAB045;
+	         position: absolute;
+	-webkit-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	        transform: rotate(90deg);
+			font-size: 11px;
+}
+.site-header .menu a:focus {
+	outline: none;
 }
