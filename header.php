@@ -124,7 +124,7 @@
 
 			 // header
 			$(function() {
-				$('.columnas .edicion').on('mouseover', function (e) {
+				$('header .columnas .edicion').on('mouseover', function (e) {
 					$('.miniatura').css('background-image', 'url("'+ $(this).data('thumb-url') +'")')
 				});
 
@@ -191,7 +191,7 @@
 				$('#content').click(foldHeader);
 				$('#colophon').click(foldHeader);
 
-				$('.menu a').click(function() {
+				$('header .menu a').click(function() {
 					var i = $(this).index();
 					if (i == _h) {
 						foldHeader();

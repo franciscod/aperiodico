@@ -1280,3 +1280,62 @@ footer.site-footer .flecha {
 .site-header .menu a:focus {
 	outline: none;
 }
+
+.single .destacados {
+	background: white;
+}
+
+.single .destacados .autor {
+	color: #DAB045;
+}
+
+.single .destacado {
+		margin: 16px 6px;
+}
+
+.single article .menu.secciones .boton {
+	width: 260px;
+	height: 36px;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+
+}
+.single article .menu.secciones .boton.seleccionado {
+	background-color: white;
+	color: #424242;
+}
+.single article .menu.secciones .boton:not(:first-child) {
+	margin-left: 16px;
+}
+
+.oculto {
+	display: none;
+}
+
+.todas .edicion {
+	float: left;
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.todas .edicion:nth-child(3n+2) {
+	margin: 0 100px;
+}
+
+.todas .edicion img {
+	width: 300px;
+	border: 1px solid #DAB045;
+}
+.todas .edicion.actual img {
+	border-width: 4px;
+}
+.todas .edicion div {
+	color: #424242;
+}
+
+.todas .edicion div.num {
+	color: #DAB045;
+	margin-top: 10px;
+	margin-bottom: 6px;
+}
