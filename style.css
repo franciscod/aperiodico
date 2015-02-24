@@ -1316,15 +1316,15 @@ footer.site-footer .flecha {
 .todas .edicion {
 	float: left;
 	text-align: center;
-	margin-bottom: 72px;
+	width: 300px;
+	height: 425px;
 }
 
 .todas .edicion:nth-child(3n+2) {
-	margin: 0 100px;
+	margin: 0 97px;
 }
 
 .todas .edicion img {
-	width: 300px;
 	border: 1px solid #DAB045;
 }
 .todas .edicion.actual img {
