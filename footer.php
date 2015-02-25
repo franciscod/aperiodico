@@ -32,11 +32,7 @@
 			</div>
 		</div>
 
-		<div class="social">
-			<div class="fb">Facebook/Aperiódico.Psicoanalítico</div>
-			<div class="tw">Twitter/Aperiódico.Psicoanalítico</div>
-		</div>
-
+		<?php apsi_social(); ?>
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -11,10 +11,7 @@
 			<div class="thumb">
 				<?php the_post_thumbnail('full'); ?>
 			</div>
-			<hr>
-			<span>Donde conseguir el numero?</span>
-			<hr>
-			<span>Compartir FB TW</span>
+			<?php apsi_pie_post(); ?>
 		</div>
 
 		<div class="right">
@@ -42,9 +39,6 @@
 					) );
 				?>
 			</div><!-- .entry-content -->
-			<footer class="entry-footer">
-				<?php aperiodico2015_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
 		</div>
 		<br style="clear: left;" />
 	</div>

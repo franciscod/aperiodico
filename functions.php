@@ -143,3 +143,8 @@ require get_template_directory() . '/inc/jetpack.php';
 * Load Aperiodico custom functions.
 */
 require get_template_directory() . '/inc/aperiodico-functions.php';
+
+/**
+* Load Aperiodico custom templates.
+*/
+require get_template_directory() . '/inc/aperiodico-templates.php';

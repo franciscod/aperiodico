@@ -98,11 +98,7 @@
 					<div class="contact-item"><b>TELÉFONO: </b>(+54 11) 4771 1625</div>
 
 				</div>
-
-				<div class="social">
-					<div class="fb">Facebook/Aperiódico.Psicoanalítico</div>
-					<div class="tw">Twitter/Aperiódico.Psicoanalítico</div>
-				</div>
+				<?php apsi_social(); ?>
 			</div>
 
 			<div class="ed-ant">

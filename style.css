@@ -1081,7 +1081,7 @@ footer.site-footer .flecha {
 	font-weight: bold;
 }
 
-.social div:before {
+.social a:before {
 	content: " ";
 	height: 17px;
 	background-repeat: no-repeat;
@@ -1182,6 +1182,12 @@ footer.site-footer .flecha {
 	width: 380px;
 	margin-top: 36px;
 	margin-left: 20px;
+}
+
+.site-header .social a,
+.site-footer .social a {
+	display: block;
+	color: #424242;
 }
 
 .site-header .entrecasa,
@@ -1385,4 +1391,32 @@ article .vcontainer.into .right {
 article .vcontainer.into:not(.past) .left {
 	position: fixed;
 	top: 0;
+}
+
+footer.entry-footer .line:before {
+
+	content: " ";
+	border: 1px solid #DAB045;
+	border-width: 1px 0 0 0;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	display: block;
+	width: 60px;
+	text-align: left;
+}
+
+
+.home .right {
+	padding-bottom: 90px;
+}
+
+.home .offset-pie {
+	position: absolute;
+	margin-top: -90px;
+}
+
+.home .offset-pie footer.entry-footer{
+	position: relative;
+	left: 540px;
+	width: 500px;
 }

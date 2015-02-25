@@ -45,10 +45,8 @@
 				?>
 			</div><!-- .entry-content -->
 
-			<footer class="entry-footer">
-				<?php aperiodico2015_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
 		</div>
 		<br style="clear: left;" />
+		<div class="offset-pie"><?php apsi_pie_post(); ?></div>
 	</div>
 </article><!-- #post-## -->
