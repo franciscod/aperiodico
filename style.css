@@ -896,7 +896,7 @@ custom aperiódico styles
 article {
 	text-transform: uppercase;
 }
-article .thumb {
+article .left {
 	float: left;
 	width: 500px;
 }
@@ -1365,4 +1365,24 @@ footer.site-footer .flecha {
 
 .todas div.flecha:before {
 	line-height: 38px;
+}
+
+article .left {
+	width: 500px;
+}
+
+article .vcontainer {
+	position: relative;
+}
+article .vcontainer.past .left {
+	position: absolute;
+	bottom: 0;
+}
+article .vcontainer.into .right {
+	margin-left: 540px;
+}
+
+article .vcontainer.into:not(.past) .left {
+	position: fixed;
+	top: 0;
 }

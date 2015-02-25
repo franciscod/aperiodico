@@ -6,44 +6,48 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="thumb">
-		<?php the_post_thumbnail('full'); ?>
-		<hr>
-		<span>Donde conseguir el numero?</span>
-		<hr>
-		<span>Compartir FB TW</span>
-	</div>
+	<div class="vcontainer">
+		<div class="left">
+			<div class="thumb">
+				<?php the_post_thumbnail('full'); ?>
+			</div>
+			<hr>
+			<span>Donde conseguir el numero?</span>
+			<hr>
+			<span>Compartir FB TW</span>
+		</div>
 
-	<div class="right">
-		<header class="entry-header">
-			<?php apsi_titulo(); ?>
-		</header><!-- .entry-header -->
+		<div class="right">
+			<header class="entry-header">
+				<?php apsi_titulo(); ?>
+			</header><!-- .entry-header -->
 
-		<div class="entry-content">
-			<div class="menu secciones">
-				<a class="boton seleccionado">SUMARIO</a>
-				<a class="boton">EDITORIAL</a>
-				<br style="clear: left;" />
-			</div>
-			<div class="sumario">
-				<?php apsi_destacados(); ?>
-				<?php apsi_sumario(); ?>
-			</div>
-			<div class="editorial oculto">
-				<?php the_content(); ?>
-			</div>
-			<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'aperiodico2015' ),
-					'after'  => '</div>',
-				) );
-			?>
-		</div><!-- .entry-content -->
-		<footer class="entry-footer">
-			<?php aperiodico2015_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
+			<div class="entry-content">
+				<div class="menu secciones">
+					<a class="boton seleccionado">SUMARIO</a>
+					<a class="boton">EDITORIAL</a>
+					<br style="clear: left;" />
+				</div>
+				<div class="sumario">
+					<?php apsi_destacados(); ?>
+					<?php apsi_sumario(); ?>
+				</div>
+				<div class="editorial oculto">
+					<?php the_content(); ?>
+				</div>
+				<?php
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . __( 'Pages:', 'aperiodico2015' ),
+						'after'  => '</div>',
+					) );
+				?>
+			</div><!-- .entry-content -->
+			<footer class="entry-footer">
+				<?php aperiodico2015_entry_footer(); ?>
+			</footer><!-- .entry-footer -->
+		</div>
+		<br style="clear: left;" />
 	</div>
-	<br style="clear: left;" />
 
 </article><!-- #post-## -->
 
@@ -79,3 +83,30 @@
 		<br style="clear: left;" />
 	</div>
 </article>
+<script>
+	var fLeftTop, fImageEndingTop;
+
+	var reposition_image = function (event) {
+
+		var mWindowScroll = $(window).scrollTop();
+
+		var sb = mWindowScroll > fLeftTop;
+		var eb = mWindowScroll > fImageEndingTop;
+
+		if (sb) { $('.vcontainer').addClass('into');} else { $('.vcontainer').removeClass('into'); }
+		if (eb) { $('.vcontainer').addClass('past');} else { $('.vcontainer').removeClass('past'); }
+
+	};
+
+
+	$(function () {
+		fLeftTop = $('.left').offset().top;
+
+		fPostBot = $('.right').height() + $('.right').offset().top;
+		fLeftHeight = $('.left').height();
+		fImageEndingTop = fPostBot - fLeftHeight;
+
+		$(window).scroll(reposition_image);
+		$(window).resize(reposition_image);
+	});
+</script>
