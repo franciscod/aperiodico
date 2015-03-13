@@ -1438,6 +1438,7 @@ nav.posts-navigation {
 
 .back-to-top {
 	background: url("img/top.svg");
+	display: inline-block;
 	margin: 0;
 	position: fixed;
 	bottom: 60px;
@@ -1447,6 +1448,14 @@ nav.posts-navigation {
 	z-index: 100;
 	opacity: 0;
 	cursor: pointer;
+}
+
+.back-to-top.abs {
+	margin: 0;
+	bottom: 180px;
+	position: initial;
+	float:right;
+	margin-right: 22px;
 }
 
 .back-to-top:focus {

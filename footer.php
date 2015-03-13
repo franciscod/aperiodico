@@ -34,8 +34,8 @@
 
 		<?php apsi_social(); ?>
 
+		<a href="#" class="back-to-top"></a>
 	</footer><!-- #colophon -->
-	<a href="#" class="back-to-top"></a>
 	<script>
 
 	$(function() {
@@ -43,17 +43,17 @@
 		var duration = 300;
 		$(window).scroll(function() {
 			var st = $(this).scrollTop();
-			var cs = $('#colophon').offset().top - $('#colophon').height() - 121;
+			var cs = $('#colophon').offset().top - $(window).height();
 			if (st > offset) {
 				$('.back-to-top').animate({opacity: 1}, duration);
 			} else {
 				$('.back-to-top').animate({opacity: 0}, duration);
 			}
 
-			if (st - cs >  60	) {
-				$('.back-to-top').css('bottom', st - cs);
+			if (st - cs > 100) {
+				$('.back-to-top').addClass('abs');
 			} else {
-				$('.back-to-top').css('bottom', '');
+				$('.back-to-top').removeClass('abs');
 			}
 		});
 
@@ -68,6 +68,5 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
 </body>
 </html>
