@@ -1060,6 +1060,7 @@ footer.site-footer {
 }
 .site-header .logo {
 	background: url('img/logo.svg');
+	background-repeat: no-repeat;
 	width: 346px;
 	height: 63px;
 }
@@ -1464,7 +1465,7 @@ nav.posts-navigation {
 }
 
 .back-to-top:focus {
-outline: none;
+	outline: none;
 }
 
 .seccion.editorial {
@@ -1494,11 +1495,16 @@ outline: none;
 		padding: 30px 20px 66px 20px;
 	}
 
-	article .right, article .left {
+	article .right, article .left, article .vcontainer .right, article .vcontainer .left {
 		float: none;
 		width: 520px;
-		margin: 0 40px;
+		margin: 0 40px 0 40px !important;
 	}
+
+	article .vcontainer .left {
+		position: initial !important;
+	}
+
 	div.boton {
 		display: inline-block;
 	}
@@ -1565,7 +1571,7 @@ outline: none;
 
 
 @media (min-width: 980px) and (max-width: 1280px) {
-	/*
+	
 	#page {
 		width: 980px;
 	}
@@ -1573,5 +1579,60 @@ outline: none;
 	.site-header {
 		width: 980px;
 	}
-	*/
+
+	.main-navigation {
+		margin-left: 65px;
+	}
+	article {
+		padding: 48px 10px;
+	}
+
+	article .right {
+		width: 400px;
+		padding-right: 10px;
+	}
+
+	.todas .edicion:nth-child(3n+2) {
+		margin: 0 19px;
+	}
+	.single article .menu.secciones .boton {
+		width: 180px;}
+	}
+	.site-header .ediciones .miniatura {
+		display: none;
+	}
+	.acerca .edit {
+		margin-left: 20px;
+	}
+
+	.acerca .texto {
+		width: 520px;
+	}
+
+	.site-header .contact .hcleft {
+		width: 300px;
+		margin-left: 100px;
+	}
+	.site-header .contact .social {
+		width: 250px;
+		margin-left: 0px;
+	}
+	.site-header .contact .ed-ant {
+		width: 540px;
+		margin-left: 20px;
+		padding-right: 90px;
+	}
+
+	#colophon .social .abbr {
+		display: none;
+	}
+
+	.site-header .ed-ant, .site-footer .ed-ant {
+		margin-left: 0px;
+	}
+
+	.site-header .social, .site-footer .social {
+		width: 100px;
+		margin-top: 44px;
+	}
 }

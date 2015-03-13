@@ -140,7 +140,7 @@
 
 				function openHeader(cb) {
 					if (_h === null) {
-						var hh = '' + (Math.floor($('.columnas').children().length / 3) * 26 + 164) + 'px';
+						var hh = '' + (Math.floor($('.columnas').children().length / 3) * 26 + 204) + 'px';
 						$('body').animate({'margin-top': hh}, 400, 'ease');
 						$('.site-header').animate({'height': hh}, 400, 'ease', cb);
 					} else {

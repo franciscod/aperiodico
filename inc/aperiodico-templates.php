@@ -2,8 +2,8 @@
 
 function apsi_social() { ?>
 	<div class="social">
-		<a target="_blank" class="fb" href="https://www.facebook.com/Aperiodico.inconscient">Facebook/Aperiódico.Psicoanalítico</a>
-		<a target="_blank" class="tw">Twitter/Aperiódico.Psicoanalítico</a>
+		<a target="_blank" class="fb" href="https://www.facebook.com/Aperiodico.inconscient">Facebook<span class="abbr">/Aperiódico.Psicoanalítico</span></a>
+		<a target="_blank" class="tw">Twitter<span class="abbr">/Aperiódico.Psicoanalítico</span></a>
 	</div>
 <?php }
 
