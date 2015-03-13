@@ -3,6 +3,8 @@
  * @package aperiodico2015
  */
 // template de entradas de a una
+$editorial = get_the_content();
+$editorial = !empty($editorial);
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -21,17 +23,21 @@
 
 			<div class="entry-content">
 				<div class="menu secciones">
-					<a class="boton seleccionado">SUMARIO</a>
+					<a class="boton seleccionado<?php if (!$editorial) { ?> unico<?php }?>">SUMARIO</a>
+					<?php if ($editorial) { ?>
 					<a class="boton">EDITORIAL</a>
+					<?php } ?>
 					<br style="clear: left;" />
 				</div>
-				<div class="sumario">
+				<div class="seccion sumario">
 					<?php apsi_destacados(); ?>
 					<?php apsi_sumario(); ?>
 				</div>
-				<div class="editorial oculto">
+				<?php if ($editorial) { ?>
+				<div class="seccion editorial oculto">
 					<?php the_content(); ?>
 				</div>
+				<?php } ?>
 				<?php
 					wp_link_pages( array(
 						'before' => '<div class="page-links">' . __( 'Pages:', 'aperiodico2015' ),
@@ -78,11 +84,12 @@
 	</div>
 </article>
 <script>
-	var fLeftTop, fImageEndingTop;
+	var fLeftTop, fLeftHeight, sfImageEndingTop;
 
-	var reposition_image = function (event) {
+	var repositionImage = function (event) {
 
 		var mWindowScroll = $(window).scrollTop();
+
 
 		var sb = mWindowScroll > fLeftTop;
 		var eb = mWindowScroll > fImageEndingTop;
@@ -92,15 +99,46 @@
 
 	};
 
+	var recalcHeights = function () {
+		var fPostBot = $('.right').height() + $('.right').offset().top;
+		fImageEndingTop = fPostBot - fLeftHeight;
+	};
+
+	var sectionButtonCallback = function (tb, ob, ts, os) {
+		return function () {
+			if (tb.hasClass('seleccionado')) {
+				return;
+			}
+
+			window.location = "<?php echo esc_url(get_permalink());?>#" + tb.text().toLowerCase();
+			tb.addClass('seleccionado');
+			ob.removeClass('seleccionado');
+			os.fadeOut(400, function () {
+				os.addClass('oculto');
+				ts.removeClass('oculto');
+				ts.fadeIn(400, recalcHeights);
+			})
+		};
+	};
 
 	$(function () {
 		fLeftTop = $('.left').offset().top;
-
-		fPostBot = $('.right').height() + $('.right').offset().top;
 		fLeftHeight = $('.left').height();
-		fImageEndingTop = fPostBot - fLeftHeight;
 
-		$(window).scroll(reposition_image);
-		$(window).resize(reposition_image);
+		recalcHeights();
+		$(window).scroll(repositionImage);
+		$(window).resize(repositionImage);
+
+		var b1 = $('.entry-content .boton').first();
+		var b2 = $('.entry-content .boton').last();
+		var s1 = $('.entry-content .seccion').first();
+		var s2 = $('.entry-content .seccion').last();
+
+		b1.click(sectionButtonCallback(b1, b2, s1, s2));
+		b2.click(sectionButtonCallback(b2, b1, s2, s1));
+
+		if (window.location.hash === "#editorial") {
+			b2.click();
+		}
 	});
 </script>

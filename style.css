@@ -1307,6 +1307,11 @@ footer.site-footer .flecha {
 	cursor: pointer;
 
 }
+
+.single article .menu.secciones .boton.unico {
+	width: 100%;
+}
+
 .single article .menu.secciones .boton.seleccionado {
 	background-color: white;
 	color: #424242;
@@ -1419,4 +1424,13 @@ footer.entry-footer .line:before {
 	position: relative;
 	left: 540px;
 	width: 500px;
+}
+
+
+nav.posts-navigation {
+	display: none;
+}
+
+.single .right .entry-content {
+	min-height: 600px;
 }
