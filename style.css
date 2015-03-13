@@ -1214,6 +1214,7 @@ footer.site-footer .flecha {
 	border-image-outset: 0px 9001px 45px 9001px;
 	border-image-repeat: stretch stretch;
 	border-image-source: url("img/gradient-top.png");
+	border-width:        0px 0px 45px 0px;
 }
 
 .site-footer {
@@ -1222,9 +1223,9 @@ footer.site-footer .flecha {
 	border-image-outset: 45px 9001px 0px 9001px;
 	border-image-repeat: stretch stretch;
 	border-image-source: url("img/gradient-bot.png");
+	border-left: none;
+	border-right: none;
 }
-
-
 
 
 .site-header .seccion {
@@ -1439,10 +1440,15 @@ nav.posts-navigation {
 	background: url("img/top.svg");
 	margin: 0;
 	position: fixed;
-	bottom: 40px;
-	right: 40px;
+	bottom: 60px;
+	right: 60px;
 	width: 32px;
 	height: 32px;
 	z-index: 100;
 	opacity: 0;
+	cursor: pointer;
+}
+
+.back-to-top:focus {
+outline: none;
 }

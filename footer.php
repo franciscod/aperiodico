@@ -35,17 +35,25 @@
 		<?php apsi_social(); ?>
 
 	</footer><!-- #colophon -->
-	<div class="back-to-top"></div>
+	<a href="#" class="back-to-top"></a>
 	<script>
 
 	$(function() {
 		var offset = 250;
 		var duration = 300;
 		$(window).scroll(function() {
-			if ($(this).scrollTop() > offset) {
+			var st = $(this).scrollTop();
+			var cs = $('#colophon').offset().top - $('#colophon').height() - 121;
+			if (st > offset) {
 				$('.back-to-top').animate({opacity: 1}, duration);
 			} else {
 				$('.back-to-top').animate({opacity: 0}, duration);
+			}
+
+			if (st - cs >  60	) {
+				$('.back-to-top').css('bottom', st - cs);
+			} else {
+				$('.back-to-top').css('bottom', '');
 			}
 		});
 
