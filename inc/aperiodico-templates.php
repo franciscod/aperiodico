@@ -10,9 +10,30 @@ function apsi_social() { ?>
 function apsi_pie_post() { ?>
 	<footer class="entry-footer">
 		<div class="bottom_aligner"></div>
-		<div class="line">Compartir FB TW</div>
+		<div class="line social share">Compartir
+			<a target="_blank" class="fb" href="#">Facebook</a>
+			<a target="_blank" class="tw" href="#">Twitter</a>
+		</div>
 		<div class="line">Donde conseguir el numero?</div>
 	</footer>
+	<script>
+	$(".social.share .fb").on("click",function(){
+		var fbpopup = window.open(
+			'https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url(get_permalink()); ?>',
+			'pop',
+			'width=600, height=400, scrollbars=no');
+		return false;
+	});
+
+	$(".social.share .tw").on("click",function(){
+		var fbpopup = window.open(
+			'https://twitter.com/intent/tweet?url=<?php echo esc_url(get_permalink()); ?>',
+			'pop',
+			'width=600, height=400, scrollbars=no');
+			return false;
+		});
+
+	</script>
 <?php }
 
 ?>

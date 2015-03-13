@@ -91,8 +91,8 @@ $editorial = !empty($editorial);
 		var mWindowScroll = $(window).scrollTop();
 
 
-		var sb = mWindowScroll > fLeftTop;
-		var eb = mWindowScroll > fImageEndingTop;
+		var sb = mWindowScroll > fLeftTop - 10;
+		var eb = mWindowScroll > fImageEndingTop - 20;
 
 		if (sb) { $('.vcontainer').addClass('into');} else { $('.vcontainer').removeClass('into'); }
 		if (eb) { $('.vcontainer').addClass('past');} else { $('.vcontainer').removeClass('past'); }

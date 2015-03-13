@@ -1276,6 +1276,10 @@ footer.site-footer .flecha {
 	color: #424242;
 }
 
+a {
+	color: #424242;
+}
+
 .site-header .menu a.flecha.selected:before {
 	            color: #DAB045;
 	         position: absolute;
@@ -1396,7 +1400,7 @@ article .vcontainer.into .right {
 
 article .vcontainer.into:not(.past) .left {
 	position: fixed;
-	top: 0;
+	top: 10px;
 }
 
 footer.entry-footer .line:before {
@@ -1461,6 +1465,10 @@ nav.posts-navigation {
 
 .back-to-top:focus {
 outline: none;
+}
+
+.seccion.editorial {
+	text-transform: none;
 }
 
 @media (max-width: 980px) {
@@ -1557,6 +1565,7 @@ outline: none;
 
 
 @media (min-width: 980px) and (max-width: 1280px) {
+	/*
 	#page {
 		width: 980px;
 	}
@@ -1564,4 +1573,5 @@ outline: none;
 	.site-header {
 		width: 980px;
 	}
+	*/
 }
