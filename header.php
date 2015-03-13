@@ -140,8 +140,9 @@
 
 				function openHeader(cb) {
 					if (_h === null) {
-						$('body').animate({'margin-top': '372px'}, 400, 'ease');
-						$('.site-header').animate({'height': '372px'}, 400, 'ease', cb);
+						var hh = '' + (Math.floor($('.columnas').children().length / 3) * 26 + 164) + 'px';
+						$('body').animate({'margin-top': hh}, 400, 'ease');
+						$('.site-header').animate({'height': hh}, 400, 'ease', cb);
 					} else {
 						if (cb) cb();
 					}
@@ -203,7 +204,6 @@
 						});
 					}
 				})
-
 		});
 		</script>
 	</header><!-- #masthead -->
