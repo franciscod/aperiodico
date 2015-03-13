@@ -27,7 +27,7 @@ $editorial = !empty($editorial);
 					<?php if ($editorial) { ?>
 					<a class="boton">EDITORIAL</a>
 					<?php } ?>
-					<br style="clear: left;" />
+					<br style="clear: both;" />
 				</div>
 				<div class="seccion sumario">
 					<?php apsi_destacados(); ?>
@@ -46,7 +46,7 @@ $editorial = !empty($editorial);
 				?>
 			</div><!-- .entry-content -->
 		</div>
-		<br style="clear: left;" />
+		<br style="clear: both;" />
 	</div>
 
 </article><!-- #post-## -->
@@ -80,7 +80,7 @@ $editorial = !empty($editorial);
 			</div>";
 		}
 		?>
-		<br style="clear: left;" />
+		<br style="clear: both;" />
 	</div>
 </article>
 <script>

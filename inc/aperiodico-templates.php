@@ -10,9 +10,9 @@ function apsi_social() { ?>
 function apsi_pie_post() { ?>
 	<footer class="entry-footer">
 		<div class="bottom_aligner"></div>
-		<div class="line">Donde conseguir el numero?</div>
 		<div class="line">Compartir FB TW</div>
+		<div class="line">Donde conseguir el numero?</div>
 	</footer>
-<?php } 
+<?php }
 
 ?>

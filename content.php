@@ -6,11 +6,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="vcontainer">
-		<div class="left">
-			<div class="thumb">
-				<?php the_post_thumbnail('full'); ?>
-			</div>
-		</div>
 		<div class="right">
 			<header class="entry-header">
 				<?php apsi_titulo(); ?>
@@ -46,7 +41,12 @@
 			</div><!-- .entry-content -->
 
 		</div>
-		<br style="clear: left;" />
+		<div class="left">
+			<div class="thumb">
+				<?php the_post_thumbnail('full'); ?>
+			</div>
+		</div>
+		<br style="clear: both;" />
 		<div class="offset-pie"><?php apsi_pie_post(); ?></div>
 	</div>
 </article><!-- #post-## -->

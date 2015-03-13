@@ -908,7 +908,7 @@ article .thumb img {
 }
 
 article .right {
-	float: left;
+	float: right;
 	width: 540px;
 	margin-left: 40px;
 }
@@ -1000,7 +1000,7 @@ article {
 .site-header {
 	width: 1280px;
 	background: #FFFFFF;
-	height:	90px;
+	height:	96px;
 }
 
 .site-title, .main-navigation {
@@ -1438,6 +1438,7 @@ nav.posts-navigation {
 
 .back-to-top {
 	background: url("img/top.svg");
+	background-repeat: no-repeat;
 	display: inline-block;
 	margin: 0;
 	position: fixed;
@@ -1460,4 +1461,107 @@ nav.posts-navigation {
 
 .back-to-top:focus {
 outline: none;
+}
+
+@media (max-width: 980px) {
+	#page {
+		width: 660px;
+	}
+
+	.site-header {
+		width: 660px;
+	}
+
+	#site-navigation {
+		display: none;
+	}
+
+	.entry-content {
+		text-align: justify;
+		width: 480px;
+		margin: 0 20px;
+	}
+
+	article {
+		padding: 30px 20px 66px 20px;
+	}
+
+	article .right, article .left {
+		float: none;
+		width: 520px;
+		margin: 0 40px;
+	}
+	div.boton {
+		display: inline-block;
+	}
+
+	div.botones a:not(:first-child) {
+		margin-left: 20px;
+	}
+
+	.destacados {
+		margin: 48px 0 18px 0;
+	}
+
+	.home .offset-pie footer.entry-footer {
+		position: initial;
+		left: 0;
+		margin: 0 100px;
+	}
+	.home .offset-pie {
+		position: initial;
+		margin-top: 0px;
+	}
+
+	.thumb {
+		margin: 0 20px;
+	}
+	.botones {
+		margin-top: 30px;
+	}
+
+	.home .right {
+		padding-bottom: 48px;
+	}
+
+	#colophon .ed-ant {
+		width:300px;
+		margin-left: 0px;
+	}
+	#colophon .contacto {
+		width: 300px;
+		margin-left: 20px;
+	}
+
+	#colophon .social {
+		width: 300px;
+		position: relative;
+		top: -55px;
+	}
+
+	#colophon .entrecasa {
+		position: relative;
+		padding-top: 0px;
+		top: 75px;
+	}
+	#colophon {
+		height: 252px;
+		background: khaki;
+	}
+
+	#colophon span.abbr {
+		display: none;
+	}
+}
+
+
+
+@media (min-width: 980px) and (max-width: 1280px) {
+	#page {
+		width: 980px;
+	}
+
+	.site-header {
+		width: 980px;
+	}
 }

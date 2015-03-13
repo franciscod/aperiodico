@@ -102,14 +102,12 @@ function apsi_sumario() {
 
 function apsi_botones() {
 ?>
+<div class="botones">
 <a href="<?php echo esc_url(get_permalink());?>#sumario"><div class="boton">SUMARIO</div></a>
 <a href="<?php echo esc_url(get_permalink());?>#editorial"><div class="boton">EDITORIAL</div></a>
+</div>
 <?php
 return ;
 }
 
-
-function apsi_sumario_vacio() {
-
-}
 ?>

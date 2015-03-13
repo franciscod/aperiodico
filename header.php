@@ -149,8 +149,8 @@
 				}
 
 				function closeHeader(cb) {
-					$('body').animate({'margin-top': '90px'}, 400, 'ease');
-					$('.site-header').animate({'height': '90px'}, 400, 'ease', function() {
+					$('body').animate({'margin-top': '96px'}, 400, 'ease');
+					$('.site-header').animate({'height': '96px'}, 400, 'ease', function() {
 						_h = null;
 						if (cb) cb();
 					});
@@ -205,6 +205,7 @@
 					}
 				})
 		});
+
 		</script>
 	</header><!-- #masthead -->
 
