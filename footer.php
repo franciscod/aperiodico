@@ -35,6 +35,28 @@
 		<?php apsi_social(); ?>
 
 	</footer><!-- #colophon -->
+	<div class="back-to-top"></div>
+	<script>
+
+	$(function() {
+		var offset = 250;
+		var duration = 300;
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > offset) {
+				$('.back-to-top').animate({opacity: 1}, duration);
+			} else {
+				$('.back-to-top').animate({opacity: 0}, duration);
+			}
+		});
+
+		$('.back-to-top').click(function(event) {
+			event.preventDefault();
+			$.scrollTo({ endY: 0, duration: duration});
+			return false;
+		})
+	});
+	</script>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

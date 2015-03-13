@@ -1434,3 +1434,15 @@ nav.posts-navigation {
 .single .right .entry-content {
 	min-height: 600px;
 }
+
+.back-to-top {
+	background: url("img/top.svg");
+	margin: 0;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	width: 32px;
+	height: 32px;
+	z-index: 100;
+	opacity: 0;
+}
