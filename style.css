@@ -1571,7 +1571,7 @@ nav.posts-navigation {
 
 
 @media (min-width: 980px) and (max-width: 1280px) {
-	
+
 	#page {
 		width: 980px;
 	}
@@ -1596,7 +1596,7 @@ nav.posts-navigation {
 		margin: 0 19px;
 	}
 	.single article .menu.secciones .boton {
-		width: 180px;}
+		width: 180px;
 	}
 	.site-header .ediciones .miniatura {
 		display: none;
