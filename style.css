@@ -1636,3 +1636,17 @@ nav.posts-navigation {
 		margin-top: 44px;
 	}
 }
+
+#infinite-footer {
+	display: none;
+}
+
+
+
+h1.entry-title, .thumb img, div.boton, a.flecha, .columnas .edicion {
+	-webkit-transition: 400ms all ease;
+	transition: 400ms all ease;
+}
+h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .columnas .edicion:hover {
+	opacity: 0.6;
+}

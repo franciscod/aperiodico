@@ -101,13 +101,16 @@ function apsi_sumario() {
 }
 
 function apsi_botones() {
+
+	$editorial = get_the_content();
+	$editorial = !empty($editorial);
 ?>
 <div class="botones">
 <a href="<?php echo esc_url(get_permalink());?>#sumario"><div class="boton">SUMARIO</div></a>
+<?php if ($editorial) { ?>
 <a href="<?php echo esc_url(get_permalink());?>#editorial"><div class="boton">EDITORIAL</div></a>
+<?php } ?>
 </div>
-<?php
-return ;
+<?php return ;
 }
-
 ?>

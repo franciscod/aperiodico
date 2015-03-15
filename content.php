@@ -42,9 +42,11 @@
 
 		</div>
 		<div class="left">
-			<div class="thumb">
-				<?php the_post_thumbnail('full'); ?>
-			</div>
+			<a href="<?php echo esc_url( get_permalink()); ?>">
+				<div class="thumb">
+					<?php the_post_thumbnail('full'); ?>
+				</div>
+			</a>
 		</div>
 		<br style="clear: both;" />
 		<div class="offset-pie"><?php apsi_pie_post(); ?></div>

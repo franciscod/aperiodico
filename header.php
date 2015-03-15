@@ -209,4 +209,37 @@
 		</script>
 	</header><!-- #masthead -->
 
+	<a href="#" class="back-to-top"></a>
+	<script>
+
+	$(function() {
+		var offset = 250;
+		var duration = 300;
+		$(window).scroll(function() {
+			var st = $(this).scrollTop();
+			var cs = 1000000;
+			if ($('#colophon').css('display') !== 'none') {
+				cs = $('#colophon').offset().top - $(window).height();
+			}
+			if (st > offset) {
+				$('.back-to-top').animate({opacity: 1}, duration);
+			} else {
+				$('.back-to-top').animate({opacity: 0}, duration);
+			}
+
+			if (st - cs > 100) {
+				$('.back-to-top').addClass('abs');
+			} else {
+				$('.back-to-top').removeClass('abs');
+			}
+		});
+
+		$('.back-to-top').click(function(event) {
+			event.preventDefault();
+			$.scrollTo({ endY: 0, duration: duration});
+			return false;
+		})
+	});
+	</script>
+
 	<div id="content" class="site-content">
