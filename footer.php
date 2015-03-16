@@ -11,6 +11,7 @@
 	</div><!-- #content -->
 	</div>
 	<div id="fo" class="ow">
+	<div class="sombra">
 	<footer id="colophon" class="site-footer iw" role="contentinfo">
 		<div class="ed-ant">
 			<div class="flecha">Ediciones Anteriores</div>
@@ -36,6 +37,7 @@
 		<?php apsi_social(); ?>
 
 	</footer><!-- #colophon -->
+	</div>
 	</div>
 </div><!-- #page -->
 

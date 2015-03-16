@@ -22,6 +22,7 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'aperiodico2015' ); ?></a>
 	<div id="ho" class="ow">
+	<div class="sombra">
 	<header id="masthead" class="site-header desplegado iw" role="banner">
 		<h1 class="site-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -209,6 +210,7 @@
 
 		</script>
 	</header><!-- #masthead -->
+	</div>
 	</div>
 	<a href="#" class="back-to-top"></a>
 	<script>
