@@ -9,6 +9,13 @@ $editorial = !empty($editorial);
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="vcontainer">
+
+		<div class="invis but660">
+			<header class="entry-header">
+				<?php apsi_titulo(); ?>
+			</header><!-- .entry-header -->
+		</div>
+
 		<div class="left">
 			<div class="thumb">
 				<?php the_post_thumbnail('full'); ?>
@@ -17,7 +24,7 @@ $editorial = !empty($editorial);
 		</div>
 
 		<div class="right">
-			<header class="entry-header">
+			<header class="entry-header invis660">
 				<?php apsi_titulo(); ?>
 			</header><!-- .entry-header -->
 
