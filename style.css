@@ -1033,13 +1033,13 @@ article {
 #ho {
 	position: absolute;
 	top: 0px;
+	left: 0px;
+	right: 0px;
 	z-index: 9001;
 }
 
 body.home #ho {
 	position: fixed;
-	left: 0px;
-	right: 0px;
 }
 
 body #content {
@@ -1565,7 +1565,6 @@ nav.posts-navigation {
 	}
 	#colophon {
 		height: 252px;
-		background: khaki;
 	}
 
 	#colophon span.abbr {
