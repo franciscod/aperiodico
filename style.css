@@ -917,10 +917,6 @@ article {
 	padding: 36px 80px;
 }
 
-#content {
-	margin: 0 10px;
-}
-
 .destacados {
 	margin: 48px 0;
 }
@@ -992,13 +988,12 @@ article {
 	margin-top: 36px;
 }
 
+
 #page {
 	margin: 0 auto;
-	width: 1280px;
 }
 
 .site-header {
-	width: 1280px;
 	background: #FFFFFF;
 	height:	96px;
 }
@@ -1036,13 +1031,13 @@ article {
 	text-transform: uppercase;
 }
 
-.site-header {
+#ho {
 	position: absolute;
 	top: 0px;
 	z-index: 9001;
 }
 
-body.home .site-header {
+body.home #ho {
 	position: fixed;
 }
 
@@ -1472,12 +1467,19 @@ nav.posts-navigation {
 	text-transform: none;
 }
 
-@media (max-width: 980px) {
-	#page {
-		width: 660px;
-	}
 
-	.site-header {
+.ow {
+	width: 100%;
+}
+
+.iw {
+	margin: 0 auto;
+	width: 1280px;
+}
+
+@media (max-width: 980px) {
+
+	.iw {
 		width: 660px;
 	}
 
@@ -1572,11 +1574,7 @@ nav.posts-navigation {
 
 @media (min-width: 980px) and (max-width: 1280px) {
 
-	#page {
-		width: 980px;
-	}
-
-	.site-header {
+	.iw {
 		width: 980px;
 	}
 
@@ -1622,6 +1620,7 @@ nav.posts-navigation {
 		margin-left: 20px;
 		padding-right: 90px;
 	}
+
 
 	#colophon .social .abbr {
 		display: none;

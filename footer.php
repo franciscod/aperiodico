@@ -9,8 +9,9 @@
 ?>
 
 	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	</div>
+	<div id="fo" class="ow">
+	<footer id="colophon" class="site-footer iw" role="contentinfo">
 		<div class="ed-ant">
 			<div class="flecha">Ediciones Anteriores</div>
 			<span>
@@ -35,7 +36,7 @@
 		<?php apsi_social(); ?>
 
 	</footer><!-- #colophon -->
-	
+	</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
