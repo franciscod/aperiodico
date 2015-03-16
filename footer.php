@@ -42,5 +42,22 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<div id="backdrop">
+	<div class="center">
+		<a class="close">X</a>
+		<div class="content"></div>
+	</div>
+</div>
+<script>
+$('.donde-conseguir').click(function() {
+	$('#backdrop .content').empty();
+	$('#colophon .ed-ant').clone().appendTo("#backdrop .content");
+	$('#backdrop').css('opacity', '0.97');
+	$('#backdrop').fadeIn();
+});
+$('#backdrop .close').click(function() {
+	$('#backdrop').fadeOut();
+});
+</script>
 </body>
 </html>

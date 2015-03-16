@@ -14,7 +14,7 @@ function apsi_pie_post() { ?>
 			<a target="_blank" class="fb" href="#">Facebook</a>
 			<a target="_blank" class="tw" href="#">Twitter</a>
 		</div>
-		<div class="line">¿Dónde conseguir el número?</div>
+		<div class="line donde-conseguir">¿Dónde conseguir el número?</div>
 	</footer>
 	<script>
 	$(".social.share .fb").on("click",function(){

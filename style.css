@@ -1035,7 +1035,7 @@ article {
 	top: 0px;
 	left: 0px;
 	right: 0px;
-	z-index: 9001;
+	z-index: 91;
 }
 
 body.home #ho {
@@ -1675,4 +1675,63 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 #ho .sombra {
 	background-color: white;
 	background-clip: content-box;
+}
+
+#backdrop {
+	position: fixed;
+	z-index: 900001;
+	display: none;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: #FBF7EC;
+	opacity: 0.95	;
+}
+
+#backdrop .center {
+	padding-top: 20px;
+	width: 500px;
+	margin: auto auto;
+}
+#backdrop .center .content {
+	padding-top: 100px;
+}
+#backdrop .close {
+	cursor: pointer;
+	float: right;
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-right: -120px;
+}
+
+
+.donde-conseguir {
+	cursor: pointer;
+}
+
+#backdrop .ed-ant > *:not(.flecha) {
+	width: 340px;
+	display: inline-block;
+}
+
+#backdrop .ed-ant .flecha {
+	font-size: 20px;
+	border: solid #DAB045;
+	border-width: 1px 0px 1px 0px;
+	margin-bottom: 30px;
+
+	padding: 4px 0px 4px 0px;
+}
+#backdrop .ed-ant small {
+	margin-top: 40px;
+}
+
+#backdrop .ed-ant .flecha:before {
+	content: "";
 }
