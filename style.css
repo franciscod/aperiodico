@@ -361,7 +361,7 @@ html {
 }
 
 body {
-	background: #FFFFFF;
+	background: #FBF7EC;
 }
 
 blockquote:before,
@@ -1510,7 +1510,6 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 }
 
 #co {
-	background: #FBF7EC;
 	margin: 0 10px;
 }
 
@@ -1885,4 +1884,8 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 	.site-header h1.site-title {
 		margin-left: 10px;
 	}
+}
+
+#fo, #ho {
+	background-color: white;
 }
