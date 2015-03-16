@@ -1635,6 +1635,10 @@ nav.posts-navigation {
 		width: 100px;
 		margin-top: 44px;
 	}
+
+	.site-header h1.site-title {
+		margin-left: 10px;
+	}
 }
 
 #infinite-footer {
@@ -1649,4 +1653,15 @@ h1.entry-title, .thumb img, div.boton, a.flecha, .columnas .edicion {
 }
 h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .columnas .edicion:hover {
 	opacity: 0.6;
+}
+
+#buscar {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	background: url('img/buscador.svg');
+	background-repeat: no-repeat;
+	margin-top: 35px;
+	margin-right: 20px;
+	float: right;
 }

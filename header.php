@@ -28,7 +28,8 @@
 				<div class="logo">&nbsp;</div>
 			</a>
 		</h1>
-
+		<a id="buscar" href="#">
+		</a>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<?php /* wp_nav_menu( array( 'theme_location' => 'primary' ) ); */ ?>
 			<span class="menu">
