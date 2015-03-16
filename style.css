@@ -1603,7 +1603,7 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 	}
 
 	.entry-content {
-		text-align: justify;
+		/*text-align: justify;*/
 		margin: 0 50px;
 	}
 
