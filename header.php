@@ -29,9 +29,14 @@
 				<div class="logo">&nbsp;</div>
 			</a>
 		</h1>
-		<a id="buscar" href="#">
-		</a>
+		<div class="navtoggle">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<a id="buscar" href="#">
+			</a>
 			<?php /* wp_nav_menu( array( 'theme_location' => 'primary' ) ); */ ?>
 			<span class="menu">
 				<a href="#" class="flecha ediciones">Ediciones</a>
@@ -128,6 +133,7 @@
 
 				var _h = null;
 				var _l = false;
+				var _n = false;
 
 				function grabLockOrStop(cb) {
 					if (_l) return;
@@ -142,7 +148,10 @@
 
 				function openHeader(cb) {
 					if (_h === null) {
-						var hh = '' + (Math.floor($('.columnas').children().length / 3) * 26 + 204) + 'px';
+						var __d = _n ? 2 : 3;
+						var __e = _n ? 254 : 204;
+						var hh = '' + (Math.floor($('.columnas').children().length / __d) * 26 + __e) + 'px';
+
 						$('body').animate({'margin-top': hh}, 400, 'ease');
 						$('.site-header').animate({'height': hh}, 400, 'ease', cb);
 					} else {
@@ -150,9 +159,19 @@
 					}
 				}
 
+
+				function midHeader(cb) {
+					$('body').animate({'margin-top': '180px'}, 400, 'ease');
+					$('.site-header').animate({'height': '180px'}, 400, 'ease', function() {
+						_h = null;
+						if (cb) cb();
+					});
+				}
+
 				function closeHeader(cb) {
-					$('body').animate({'margin-top': '96px'}, 400, 'ease');
-					$('.site-header').animate({'height': '96px'}, 400, 'ease', function() {
+					var hh = _n ? '180px' : '96px';
+					$('body').animate({'margin-top': hh}, 400, 'ease');
+					$('.site-header').animate({'height': hh}, 400, 'ease', function() {
 						_h = null;
 						if (cb) cb();
 					});
@@ -200,6 +219,30 @@
 								fadeOutCurrent(function() {
 									fadeIn(i, function() {
 										releaseLock()
+									});
+								});
+							});
+						});
+					}
+				})
+
+
+				$('.navtoggle').click(function() {
+					_n = !_n;
+					if (_n) {
+						grabLockOrStop(function() {
+							closeHeader(function() {
+								$('nav#site-navigation').fadeIn(400, function () {
+									releaseLock();
+								});
+							});
+						});
+					} else {
+						grabLockOrStop(function() {
+							fadeOutCurrent(function() {
+								$('nav#site-navigation').fadeOut(400, function() {
+									closeHeader(function() {
+										releaseLock();
 									});
 								});
 							});
