@@ -48,15 +48,61 @@
 		<div class="content"></div>
 	</div>
 </div>
+
+<div class="hidden">
+	<div class="buscador">
+		<span class="lupa"></span>
+		<input class="query" placeholder="Escriba su búsqueda">
+		<div class="resultados-busqueda"></div>
+	</div>
+</div>
+
 <script>
-$('.donde-conseguir').click(function() {
-	$('#backdrop .content').empty();
-	$('#colophon .ed-ant').clone().appendTo("#backdrop .content");
-	$('#backdrop').css('opacity', '0.97');
-	$('#backdrop').fadeIn();
-});
-$('#backdrop .close').click(function() {
-	$('#backdrop').fadeOut();
+$(function () {
+	var openBackdropWith = function openBackdropWith(el) {
+		$('#backdrop .content').empty();
+		el.clone().appendTo("#backdrop .content");
+		$('#backdrop').css('opacity', '0.97');
+		$('#backdrop').fadeIn();
+	};
+
+	$('.donde-conseguir').click(function() {
+		openBackdropWith($('#colophon .ed-ant'));
+	});
+
+	$('#backdrop .close').click(function() {
+		$('#backdrop').fadeOut();
+	});
+
+	$('#buscar').click(function() {
+		openBackdropWith($('.buscador'));
+
+		$('.buscador .query').on('keypress', function(e) {
+			if (e.which == 13) {
+				buscar($(this).val());
+			}
+		});
+	});
+	var buscar = function buscar(q) {
+
+		$(".resultados-busqueda").fadeOut(200, function(){
+			$(".resultados-busqueda").empty();
+		});
+
+		$.ajax({
+			url: '<?php echo admin_url( 'admin-ajax.php' ); ?>',
+			type: 'POST',
+			data: {
+				'action': 'apsi_buscar',
+				'q': q
+			},
+			success: function (response) {
+				$(".resultados-busqueda").append(response);
+				$(".resultados-busqueda").fadeIn();
+			}
+		});
+	};
+
 });
 </script>
 </body>

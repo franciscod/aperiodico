@@ -113,4 +113,64 @@ function apsi_botones() {
 </div>
 <?php return ;
 }
+
+
+add_action( 'wp_ajax_apsi_buscar', 'apsi_buscar' );
+add_action( 'wp_ajax_nopriv_apsi_buscar', 'apsi_buscar' );
+
+function apsi_buscar() {
+	global $wpdb;
+
+	$q = strtoupper(remove_accents($_POST['q']));
+	$r = array();
+	$c = 0;
+	$ediciones = get_posts(array(
+		'posts_per_page' => -1, // all of them
+		'category' => 'ediciones',
+	));
+
+	foreach ($ediciones as $edicion) {
+		list($o, $num, $tit) = apsi_split_titulo($edicion->post_title);
+
+		$custom = get_post_custom($edicion->ID);
+
+		$cds = $custom['destacados'];
+		$destacados = array();
+		if (trim($cds[0])){
+			$destacados = split2lines($cds[0]);
+		};
+
+		$csm = $custom['sumario'];
+		$sumario = array();
+		if (trim($csm[0])) {
+			$sumario = split2lines($csm[0]);
+		};
+
+
+		$res = $destacados + $sumario;
+
+		foreach ($res as $d) {
+			$l = splitlines($d);
+			if (!$l[0]) continue;
+			$s = strtoupper(remove_accents("$l[0] $l[1]"));
+			$pos = strpos($s, $q);
+			if ($pos === false) {
+			} else {
+				$r[] = "$num: $s\n";
+				$c++;
+			}
+		}
+	}
+
+	if ($c == 0) { ?>
+		<div>No se encontraron resultados para su búsqueda.</div>
+	<?php } else { ?>
+		<div>Encontramos <?php echo $c; ?> resultados para su búsqueda:</div>
+		<?php foreach ($r as $i) {
+			echo "$i<br>";
+		}
+	}
+
+	wp_die(); // this is required to terminate immediately and return a proper response
+}
 ?>

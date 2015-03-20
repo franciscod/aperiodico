@@ -35,7 +35,7 @@
 			<div></div>
 		</div>
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<a id="buscar" href="#">
+			<a id="buscar" class="lupa" href="#">
 			</a>
 			<?php /* wp_nav_menu( array( 'theme_location' => 'primary' ) ); */ ?>
 			<span class="menu">
