@@ -123,7 +123,6 @@ function aperiodico2015_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'aperiodico2015' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
