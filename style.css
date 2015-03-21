@@ -1919,7 +1919,7 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 	-webkit-box-shadow: none !important;
 	-moz-box-shadow: none !important;
 	box-shadow: none !important;
-	
+
 	border-width: 2px 0;
 }
 
@@ -1952,6 +1952,11 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 .resultados-busqueda mark {
 	background-color: #ECD7A1;
 }
+
+.resultados-busqueda .sumarios{
+	margin-top: 36px;
+}
+
 .resultados-busqueda .sumarios > div {
 	font-size: 10px;
 	margin-bottom: 1em;
