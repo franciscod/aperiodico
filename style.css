@@ -1907,15 +1907,68 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 	vertical-align: top;
 	height: 50px;
 	border: solid #DAB045;
-	border-width: 1px 0 1px 0;
+	border-width: 1px 0;
 	background-color: transparent;
 	font-size: 22px;
 	width: 400px;
 
 }
 
-.resultados-busqueda {
+.buscador .query:focus {
+	outline: 0;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	
+	border-width: 2px 0;
+}
+
+.resultados-busqueda  {
 	margin-top: 40px;
-	height: 500px;
+}
+
+.resultados-busqueda .ediciones {
+	height: 300px;
 	overflow-y: auto;
+}
+
+.resultados-busqueda .edicion {
+	text-transform: uppercase;
+	clear: both;
+	margin: 18px 0;
+}
+.resultados-busqueda .edicion a > div {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+}
+
+.resultados-busqueda img {
+	width: 140px;
+	margin-right: 20px;
+	border: 1px solid #DAB045;
+}
+
+.resultados-busqueda mark {
+	background-color: #ECD7A1;
+}
+.resultados-busqueda .sumarios > div {
+	font-size: 10px;
+	margin-bottom: 1em;
+}
+
+.resultados-busqueda .sumarios .autor {
+	color: #999;
+}
+
+.resultados-busqueda span.numero {
+	color: #DAB045;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.resultados-busqueda span.titulo {
+	color: #424242;
+	font-weight: normal;
+	font-size: 24px;
 }

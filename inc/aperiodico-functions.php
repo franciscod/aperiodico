@@ -130,7 +130,23 @@ function apsi_buscar() {
 	));
 
 	foreach ($ediciones as $edicion) {
+		$postmatch = array();
+		$innermatch = array();
+		$m = 0;
+
 		list($o, $num, $tit) = apsi_split_titulo($edicion->post_title);
+		$link = get_permalink($edicion->ID);
+		$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID));
+		$thumb_url = $thumb_data[0];
+
+		$s = strtoupper(remove_accents("$num $tit"));
+		$pos = strpos($s, $q);
+
+		if ($pos === false) {
+		} else {
+			$c++;
+			$m = 1;
+		}
 
 		$custom = get_post_custom($edicion->ID);
 
@@ -147,7 +163,8 @@ function apsi_buscar() {
 		};
 
 
-		$res = $destacados + $sumario;
+		//$res = $destacados + $sumario;
+		$res = $sumario; // los destacados ya estan en sumario
 
 		foreach ($res as $d) {
 			$l = splitlines($d);
@@ -156,9 +173,18 @@ function apsi_buscar() {
 			$pos = strpos($s, $q);
 			if ($pos === false) {
 			} else {
-				$r[] = "$num: $s\n";
+				$innermatch[] = "<div class='titulo'>$l[0]</div><div class='autor'>$l[1]</div>";
 				$c++;
+				$m = 1;
 			}
+		}
+		if ($m) {
+			$postmatch['img'] = $thumb_url;
+			$postmatch['num'] = $num;
+			$postmatch['tit'] = $tit;
+			$postmatch['in'] = $innermatch;
+			$postmatch['link'] = $link;
+			$r[] = $postmatch;
 		}
 	}
 
@@ -166,9 +192,28 @@ function apsi_buscar() {
 		<div>No se encontraron resultados para su búsqueda.</div>
 	<?php } else { ?>
 		<div>Encontramos <?php echo $c; ?> resultados para su búsqueda:</div>
-		<?php foreach ($r as $i) {
-			echo "$i<br>";
-		}
+		<div class="ediciones">
+		<?php foreach ($r as $match) {?>
+		<div class="edicion">
+			<a href="<?php echo $match['link']; ?>">
+				<img src="<?php echo $match['img']; ?>">
+				<div>
+						<span class="numero">N°<?php echo $match['num']; ?></span><br/>
+						<span class="titulo"><?php echo $match['tit']; ?></span>
+					<div class="sumarios">
+					<?php foreach ($match['in'] as $i) {?>
+						<div>
+							<?php echo $i; ?>
+						</div>
+					<?php } ?>
+					</div>
+				</div>
+			</a>
+		</div>
+		<?php
+		}?>
+		</div>
+		<?php
 	}
 
 	wp_die(); // this is required to terminate immediately and return a proper response

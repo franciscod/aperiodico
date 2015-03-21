@@ -76,6 +76,7 @@ $(function () {
 
 	$('#buscar').click(function() {
 		openBackdropWith($('.buscador'));
+		$('.buscador .query').focus();
 
 		$('.buscador .query').on('keypress', function(e) {
 			if (e.which == 13) {
@@ -97,7 +98,25 @@ $(function () {
 				'q': q
 			},
 			success: function (response) {
+
 				$(".resultados-busqueda").append(response);
+
+				$('.resultados-busqueda .sumarios > div > div, .resultados-busqueda span.titulo').each(function(i, e) {
+					var orig = $(e).html();
+					var term = q;
+					
+					term = term.replace('a', '[aá]')
+					term = term.replace('e', '[eé]')
+					term = term.replace('i', '[ií]')
+					term = term.replace('o', '[oó]')
+					term = term.replace('u', '[uú]')
+
+					var pattern = new RegExp("("+term+")", "gi");
+
+					marked = orig.replace(pattern, "<mark>$1</mark>");
+					$(e).html(marked);
+				})
+
 				$(".resultados-busqueda").fadeIn();
 			}
 		});
