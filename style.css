@@ -1830,7 +1830,7 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 
 	.site-header {
 		height: initial !important;
-		margin-bottom: 36px !important;
+		padding-bottom: 30px;
 	}
 
 	article .right {
