@@ -2016,3 +2016,99 @@ body.showing-backdrop #backdrop {
 		display: inline-block;
 	}
 }
+
+@media (max-width: 660px) {
+
+	.iw {
+		width: 100%;
+	}
+
+	#site-navigation {
+		display: none;
+	}
+
+	.entry-content {
+		margin: 0 50px;
+	}
+
+	article {
+		padding: 30px 50px 10px 50px;
+	}
+
+	#colophon .ed-ant {
+		width:300px;
+		margin-left: 0px;
+	}
+	#colophon .contacto {
+		margin-left: 20px;
+	}
+
+	#colophon .social ,
+	#colophon .contacto {
+		width: 220px;
+	}
+	#colophon {
+		width: 83%;
+	}
+
+	.single article .menu.secciones .boton {
+		width: 43%;
+	}
+
+	h1.entry-title {
+		margin: 10px 50px 48px 50px;
+	}
+
+	.entry-footer {
+		margin: 36px 50px;
+	}
+	article.todas {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	article.todas .edicion {
+		width: 40%;
+		margin: 0 20px;
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.todas .edicion img {
+		height: initial;
+		width: initial;
+	}
+
+	article .thumb img {
+		height: inherit;
+	}
+	.boton {
+		width: 100px;
+	}
+
+	.home .offset-pie footer.entry-footer {
+		margin: 0 20px;
+	}
+
+	.navtoggle {
+		float: right;
+		margin: 27px 15px 0px 0px !important;
+	}
+
+	.site-header .menu a.flecha {
+		text-align: left;
+		margin: 0 30px;
+	}
+	.main-navigation .menu {
+	  text-align: center;
+	  padding: 0 !important;
+
+	}
+
+	h1.site-title{
+		margin-left:30px !important;
+		width: 70%;}
+
+		.site-header .logo {
+			width: 100%;
+		}
