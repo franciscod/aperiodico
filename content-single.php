@@ -91,11 +91,11 @@ $editorial = !empty($editorial);
 	</div>
 </article>
 <script>
-	var fLeftTop, fLeftHeight, sfImageEndingTop;
+	var fLeftTop, fLeftHeight, sfImageEndingTop, iHeaderHeight;
 
 	var repositionImage = function (event) {
 
-		var mWindowScroll = $(window).scrollTop();
+		var mWindowScroll = $(window).scrollTop() - $('#ho').height() + iHeaderHeight;
 
 
 		var sb = mWindowScroll > fLeftTop - 10;
@@ -129,6 +129,7 @@ $editorial = !empty($editorial);
 	};
 
 	$(function () {
+		iHeaderHeight = $('#ho').height();
 		fLeftTop = $('.left').offset().top;
 		fLeftHeight = $('.left').height();
 
