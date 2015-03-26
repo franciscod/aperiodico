@@ -1927,11 +1927,6 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 	margin-top: 40px;
 }
 
-.resultados-busqueda .ediciones {
-	height: 300px;
-	overflow-y: auto;
-}
-
 .resultados-busqueda .edicion {
 	text-transform: uppercase;
 	clear: both;
@@ -1976,4 +1971,12 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 	color: #424242;
 	font-weight: normal;
 	font-size: 24px;
+}
+
+body.showing-backdrop {
+	overflow: hidden;
+}
+
+body.showing-backdrop #backdrop {
+	overflow-y: auto;
 }

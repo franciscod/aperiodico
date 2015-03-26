@@ -60,21 +60,24 @@
 <script>
 $(function () {
 	var openBackdropWith = function openBackdropWith(el) {
-		$('#backdrop .content').empty();
 		el.clone().appendTo("#backdrop .content");
 		$('#backdrop').css('opacity', '0.97');
 		$('#backdrop').fadeIn();
+		$('body').addClass('showing-backdrop');
 	};
 
 	$('.donde-conseguir').click(function() {
 		openBackdropWith($('#colophon .ed-ant'));
 	});
 
-	$('#backdrop .close').click(function() {
+	$('#backdrop .close').click(function(e) {
 		$('#backdrop').fadeOut();
+		$('#backdrop .content').empty();
+		$('body').removeClass('showing-backdrop');
+		e.preventDefault();
 	});
 
-	$('#buscar').click(function() {
+	$('#buscar').click(function(e) {
 		openBackdropWith($('.buscador'));
 		$('.buscador .query').focus();
 
@@ -83,11 +86,12 @@ $(function () {
 				buscar($(this).val());
 			}
 		});
+		e.preventDefault();
 	});
 	var buscar = function buscar(q) {
 
-		$(".resultados-busqueda").fadeOut(200, function(){
-			$(".resultados-busqueda").empty();
+		$("#backdrop .resultados-busqueda").fadeOut(200, function(){
+			$("#backdrop .resultados-busqueda").empty();
 		});
 
 		$.ajax({
@@ -99,12 +103,12 @@ $(function () {
 			},
 			success: function (response) {
 
-				$(".resultados-busqueda").append(response);
+				$("#backdrop .resultados-busqueda").append(response);
 
-				$('.resultados-busqueda .sumarios > div > div, .resultados-busqueda span.titulo').each(function(i, e) {
+				$('#backdrop .resultados-busqueda .sumarios > div > div, .resultados-busqueda span.titulo').each(function(i, e) {
 					var orig = $(e).html();
 					var term = q;
-					
+
 					term = term.replace('a', '[aá]')
 					term = term.replace('e', '[eé]')
 					term = term.replace('i', '[ií]')
@@ -117,7 +121,7 @@ $(function () {
 					$(e).html(marked);
 				})
 
-				$(".resultados-busqueda").fadeIn();
+				$("#backdrop .resultados-busqueda").fadeIn();
 			}
 		});
 	};
