@@ -71,13 +71,16 @@ $(function () {
 	});
 
 	$('#backdrop .close').click(function(e) {
-		$('#backdrop').fadeOut();
-		$('#backdrop .content').empty();
-		$('body').removeClass('showing-backdrop');
+		$('#backdrop').fadeOut(400, function() {
+			$('#backdrop .content').empty();
+			$('body').removeClass('showing-backdrop');
+			$('body').removeClass('backdrop-search');
+		});
 		e.preventDefault();
 	});
 
 	$('#buscar').click(function(e) {
+		$('body').addClass('backdrop-search');
 		openBackdropWith($('.buscador'));
 		$('.buscador .query').focus();
 

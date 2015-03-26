@@ -202,7 +202,7 @@ function apsi_buscar() {
 						<span class="titulo"><?php echo $match['tit']; ?></span>
 					<div class="sumarios">
 					<?php foreach ($match['in'] as $i) {?>
-						<div>
+						<div class="resultado">
 							<?php echo $i; ?>
 						</div>
 					<?php } ?>

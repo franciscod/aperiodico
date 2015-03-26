@@ -1980,3 +1980,39 @@ body.showing-backdrop {
 body.showing-backdrop #backdrop {
 	overflow-y: auto;
 }
+
+
+
+@media (min-width: 980px) {
+
+	body.backdrop-search #backdrop .center {
+		width: 750px;
+	}
+
+	.buscador .query {
+		width: 650px;
+	}
+
+	.resultados-busqueda img {
+		width: 200px;
+	}
+	.resultados-busqueda .sumarios {
+		width: 540px;
+
+		column-count: 2;
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+
+		column-width: 260px;
+		-moz-column-width: 260px;
+		-webkit-column-width: 260px;
+
+		column-rule-width: 20px;
+		-moz-column-rule-width: 20px;
+		-webkit-column-rule-width: 20px;
+	}
+
+	.resultados-busqueda .resultado {
+		display: inline-block;
+	}
+}
