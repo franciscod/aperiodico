@@ -1559,9 +1559,14 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 }
 
 #backdrop .ed-ant > *:not(.flecha) {
-	width: 340px;
+	width: 100%;
 	display: inline-block;
 }
+
+#backdrop .ed-ant span {
+	margin-bottom: 20px;
+}
+
 
 #backdrop .ed-ant .flecha {
 	font-size: 20px;
@@ -1573,6 +1578,8 @@ h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .column
 }
 #backdrop .ed-ant small {
 	margin-top: 40px;
+	font-variant: small-caps;
+	font-size: 13px;
 }
 
 #backdrop .ed-ant .flecha:before {
@@ -1985,7 +1992,7 @@ body.showing-backdrop #backdrop {
 
 @media (min-width: 980px) {
 
-	body.backdrop-search #backdrop .center {
+	#backdrop .center {
 		width: 750px;
 	}
 
@@ -2112,3 +2119,18 @@ body.showing-backdrop #backdrop {
 		.site-header .logo {
 			width: 100%;
 		}
+}
+
+#colophon span.abbr-foot {
+	display: none;
+}
+
+#backdrop span.abbr-foot {
+	display: initial;
+}
+
+
+#colophon small {
+  font-size: 10px;
+  font-variant: small-caps;
+}

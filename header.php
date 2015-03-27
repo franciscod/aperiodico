@@ -116,7 +116,7 @@
 				<div class="contact-item"><b>MAIL: </b>etendlar@fibertel.com.ar</div>
 				<div class="contact-item"><b>TELÉFONO: </b>(+54 11) 4771 1625</div>
 
-				<small>Envíos a todo el mundo previo depósito bancario. Precio de las ediciones actualizado al valor de la última edición más costos de envío</small>
+				<small>Envíos en formato digital a cualquier parte del mundo previo depósito bancario. Precio actualizado al valor de la última edición más costos administrativos.</small>
 			</div>
 
 		</div>
