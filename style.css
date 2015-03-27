@@ -1646,7 +1646,7 @@ a.flecha:hover,
 	article .vcontainer .left {
 		position: initial !important;
 	}
-
+	.edit { display: none;}
 	div.boton {
 		display: inline-block;
 	}
@@ -1801,8 +1801,9 @@ a.flecha:hover,
 		margin-left: 55px;
 	}
 	.acerca .texto {
-		margin-left: 40px;
-		width: 320px;
+		width: 400px;
+		  float: none;
+		  margin: auto;
 	}
 
 	.contact > div {
@@ -2056,7 +2057,7 @@ body.showing-backdrop #backdrop {
 	}
 
 	article {
-		padding: 30px 50px 10px 50px;
+		padding: 30px 0 10px 0;
 	}
 
 	#colophon .ed-ant {
@@ -2129,13 +2130,31 @@ body.showing-backdrop #backdrop {
 
 	}
 
-	h1.site-title{
+	h1.site-title {
 		margin-left:30px !important;
-		width: 70%;}
+		width: 70%;
+	}
 
-		.site-header .logo {
-			width: 100%;
-		}
+	.site-header .logo {
+		width: 100%;
+	}
+
+	.site-header .ediciones .columnas {
+		float: none;
+		line-height: 26px;
+		margin-left: 40px;
+		column-count: 2;
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		width: 500px;
+		column-width: 225px;
+		-moz-column-width: 225px;
+		-webkit-column-width: 225px;
+		column-rule-width: 25px;
+		-moz-column-rule-width: 25px;
+		-webkit-column-rule-width: 25px;
+	}
+
 }
 
 #colophon span.abbr-foot {

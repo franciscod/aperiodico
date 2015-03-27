@@ -149,7 +149,7 @@
 				function openHeader(cb) {
 					if (_h === null) {
 						var __d = _n ? 2 : 3;
-						var __e = _n ? 254 : 204;
+						var __e = _n ? 284 : 204;
 						var hh = '' + (Math.floor($('.columnas').children().length / __d) * 26 + __e) + 'px';
 
 						$('body').animate({'margin-top': hh}, 400, 'ease');
