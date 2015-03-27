@@ -1489,11 +1489,28 @@ nav.posts-navigation {
 
 
 
-h1.entry-title, .thumb img, div.boton, a.flecha, .columnas .edicion, .navtoggle{
+h1.entry-title,
+body.home .thumb img,
+div.boton,
+a.flecha,
+.columnas .edicion,
+.navtoggle,
+.todas .edicion img,
+.todas .edicion div,
+{
 	-webkit-transition: 400ms all ease;
 	transition: 400ms all ease;
 }
-h1.entry-title:hover, .thumb img:hover, div.boton:hover, a.flecha:hover, .columnas .edicion:hover, .navtoggle:hover {
+
+h1.entry-title:not(.brng):hover,
+body.home .thumb img:hover,
+div.boton:hover,
+a.flecha:hover,
+.columnas .edicion:hover,
+.navtoggle:hover,
+.todas .edicion img:hover,
+.todas .edicion div:hover,
+{
 	opacity: 0.6;
 	cursor: pointer;
 }

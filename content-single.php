@@ -12,7 +12,7 @@ $editorial = !empty($editorial);
 
 		<div class="invis but660">
 			<header class="entry-header">
-				<?php apsi_titulo(); ?>
+				<?php apsi_titulo_sinlink(); ?>
 			</header><!-- .entry-header -->
 		</div>
 
@@ -25,7 +25,7 @@ $editorial = !empty($editorial);
 
 		<div class="right">
 			<header class="entry-header invis660">
-				<?php apsi_titulo(); ?>
+				<?php apsi_titulo_sinlink(); ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">

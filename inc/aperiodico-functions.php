@@ -36,6 +36,16 @@ function apsi_titulo() {
 			</h1>', $link, $numero, $link, $titulo );
 }
 
+function apsi_titulo_sinlink() {
+	list($orig, $numero, $titulo) = apsi_split_titulo(the_title_attribute(array('echo' => false)));
+	
+	printf('<h1 class="brng entry-title">
+					<span class="brng numero">N°%s</span>
+				<br/>
+					<span class="brng titulo">%s</span>
+			</h1>', $numero, $titulo );
+}
+
 function apsi_escriben() {
 	$custom = get_post_custom();
 	$ces = $custom['escriben'];

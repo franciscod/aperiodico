@@ -30,9 +30,9 @@
 			<div class="contact-item"><b>MAIL: </b>etendlar@fibertel.com.ar</div>
 			<div class="contact-item"><b>TELÉFONO: </b>(+54 11) 4771 1625</div>
 
-			<div class="entrecasa">
+			<a class="entrecasa" href="http://www.entrecasaestudio.com.ar/">
 				<i></i><span>diseño</span>
-			</div>
+			</a>
 		</div>
 
 		<?php apsi_social(); ?>
