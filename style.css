@@ -1485,7 +1485,8 @@ a.flecha,
 .columnas .edicion,
 .navtoggle,
 .todas .edicion img,
-.todas .edicion div
+.todas .edicion div,
+.entrecasa
 {
 	-webkit-transition: 400ms all ease;
 	transition: 400ms all ease;
@@ -1498,7 +1499,8 @@ a.flecha:hover,
 .columnas .edicion:hover,
 .navtoggle:hover,
 .todas .edicion img:hover,
-.todas .edicion div:hover
+.todas .edicion div:hover,
+.entrecasa:hover
 {
 	opacity: 0.6;
 	cursor: pointer;
