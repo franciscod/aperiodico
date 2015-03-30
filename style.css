@@ -880,6 +880,7 @@ custom aperiódico styles
 }
 .entry-title {
 	margin-bottom: 48px;
+	line-height: 1.4em;
 }
 
 article {
@@ -905,7 +906,7 @@ article {
 }
 
 .destacados {
-	margin: 48px 0;
+	margin: 40px 0;
 }
 .destacados hr {
 	color: #DAB045;
@@ -913,7 +914,7 @@ article {
 	height: 1px;
 	margin: 2px 0;
 }
-.destacados div {
+.destacados > div {
 	margin: 4px 0;
 }
 .destacados .titulo {
@@ -1595,6 +1596,11 @@ a.flecha:hover,
 	display: none;
 }
 
+
+.botones {
+	margin-top: 40px;
+}
+
 @media (max-width: 980px) {
 
 	body.home #ho, #ho {
@@ -2161,4 +2167,8 @@ body.showing-backdrop #backdrop {
 #colophon small {
   font-size: 10px;
   font-variant: small-caps;
+}
+
+article span.autor {
+  line-height: 24px;
 }
