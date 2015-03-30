@@ -585,17 +585,6 @@ a:active {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
-}
-
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -909,8 +898,7 @@ article .thumb img {
 
 article .right {
 	float: right;
-	width: 540px;
-	margin-left: 40px;
+	width: 580px;
 }
 article {
 	padding: 36px 80px;
@@ -1630,7 +1618,7 @@ a.flecha:hover,
 
 	.entry-content {
 		/*text-align: justify;*/
-		margin: 0 50px;
+		margin: 0 20px;
 	}
 
 	article {
@@ -1662,7 +1650,7 @@ a.flecha:hover,
 	.home .offset-pie footer.entry-footer {
 		position: initial;
 		left: 0;
-		margin: 0 100px;
+		margin: 0 20px;
 	}
 	.home .offset-pie {
 		position: initial;
@@ -1716,7 +1704,7 @@ a.flecha:hover,
 	}
 
 	h1.entry-title {
-		margin: 10px 50px 48px 50px;
+		margin: 10px 20px 48px 20px;
 	}
 
 	.entry-footer {
@@ -1832,6 +1820,10 @@ a.flecha:hover,
 	}
 	.contact .ed-ant .contact-item {
 		display: inline;
+	}
+	article .thumb img {
+		height: initial;
+		width: initial;
 	}
 }
 
@@ -2053,7 +2045,7 @@ body.showing-backdrop #backdrop {
 	}
 
 	.entry-content {
-		margin: 0 50px;
+		margin: 0 20px;
 	}
 
 	article {
@@ -2081,7 +2073,7 @@ body.showing-backdrop #backdrop {
 	}
 
 	h1.entry-title {
-		margin: 10px 50px 48px 50px;
+		margin: 10px 20px 48px 20px;
 	}
 
 	.entry-footer {
