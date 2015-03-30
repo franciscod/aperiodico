@@ -2169,3 +2169,17 @@ body.showing-backdrop #backdrop {
 article span.autor {
   line-height: 24px;
 }
+
+.entry-footer div, .entry-footer a {
+	color: #7a7a7a;
+	letter-spacing: 1px;
+}
+
+.entry-footer .line {
+	margin-bottom: 2em;
+}
+
+.entry-footer .social a {
+	margin: 0px 15px;
+	text-transform: none;
+}
