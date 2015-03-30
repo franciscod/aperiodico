@@ -1163,11 +1163,17 @@ footer.site-footer .flecha {
 	margin-left: 100px;
 }
 
-.site-header .social,
-.site-footer .social {
+.site-header .social {
 	width: 380px;
 	margin-top: 36px;
 	margin-left: 20px;
+}
+
+.site-footer .social {
+	width: 380px;
+	margin-top: 43px;
+	margin-left: 20px;
+	line-height: 24px;
 }
 
 .site-header .social a,
@@ -1325,6 +1331,21 @@ a {
 	text-align: center;
 	width: 300px;
 	height: 450px;
+}
+
+
+.site-header .social {
+  margin-left: 40px;
+  width: 300px;
+}
+
+.site-header .ed-ant {
+  margin-left: 0px;
+  width: 540px;
+}
+
+.site-header .ed-ant .mailtel .contact-item {
+	display: inline-block;
 }
 
 @media (min-width: 1280px) {
@@ -1818,8 +1839,10 @@ a.flecha:hover,
 	}
 
 	.contact small {
-		margin-top: 36px;
 		display: inline-block;
+	}
+	.contact small:first-of-type {
+		margin-top: 36px;
 	}
 
 	.contact .ed-ant span {
@@ -1881,12 +1904,11 @@ a.flecha:hover,
 	}
 
 	.site-header .contact .hcleft {
-		width: 300px;
-		margin-left: 100px;
+		margin-left: 50px;
 	}
 	.site-header .contact .social {
-		width: 250px;
-		margin-left: 0px;
+		/*width: 250px;
+		margin-left: 0px;*/
 	}
 	.site-header .contact .ed-ant {
 		width: 540px;
@@ -1903,7 +1925,7 @@ a.flecha:hover,
 		margin-left: 0px;
 	}
 
-	.site-header .social, .site-footer .social {
+	.site-footer .social {
 		width: 100px;
 		margin-top: 44px;
 	}
@@ -2184,4 +2206,12 @@ article span.autor {
 .entry-footer .social a {
 	margin: 0px 15px;
 	text-transform: none;
+}
+
+.site-header .ed-ant .mailtel .contact-item {
+	display: inline-block;
+	margin-bottom: 12px;
+}
+.site-header .paraconseguir {
+	padding-top: 12px;
 }

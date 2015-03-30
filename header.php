@@ -109,14 +109,18 @@
 			</div>
 
 			<div class="ed-ant">
-				<div class="upperbold">Ediciones Anteriores</div>
-				<span>
-					Para conseguir ediciones anteriores puede contactarse con la redacción del Aperiódico Psicoanalítico:
-				</span>
-				<div class="contact-item"><b>MAIL: </b>etendlar@fibertel.com.ar</div>
-				<div class="contact-item"><b>TELÉFONO: </b>(+54 11) 4771 1625</div>
-
-				<small>Envíos en formato digital a cualquier parte del mundo previo depósito bancario. Precio actualizado al valor de la última edición más costos administrativos.</small>
+				<div class="upperbold">Ediciones Anteriores:</div>
+				<div class="paraconseguir">
+					Para conseguir ediciones anteriores puede contactarse con la Redacción del Aperiódico Psicoanalítico:
+				</div>
+				<div class="mailtel">
+					<div class="contact-item"><b>MAIL: </b>etendlar@fibertel.com.ar</div>
+					<div class="contact-item"><b>TELÉFONO: </b>(+54 11) 4771 1625</div>
+				</div>
+				
+				<small>Envíos en formato digital a cualquier parte del mundo previo depósito bancario. </small>
+				<br>
+				<small>Precio actualizado al valor de la última edición más costos administrativos.</small>
 			</div>
 
 		</div>
