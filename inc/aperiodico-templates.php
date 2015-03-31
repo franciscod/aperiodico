@@ -3,7 +3,7 @@
 function apsi_social() { ?>
 	<div class="social">
 		<a target="_blank" class="fb" href="https://www.facebook.com/Aperiodico.inconscient">Facebook<span class="abbr">/Aperiódico.Psicoanalítico</span></a>
-		<a target="_blank" class="tw">Twitter<span class="abbr">/Aperiódico.Psicoanalítico</span></a>
+		<a target="_blank" class="tw" href="https://twitter.com/aperiodicopsi">Twitter<span class="abbr">/Aperiódico.Psicoanalítico</span></a>
 	</div>
 <?php }
 
@@ -11,8 +11,8 @@ function apsi_pie_post() { ?>
 	<footer class="entry-footer">
 		<div class="bottom_aligner"></div>
 		<div class="line social share">Compartir
-			<a target="_blank" class="fb" href="#">Facebook</a>
-			<a target="_blank" class="tw" href="#">Twitter</a>
+			<a target="_blank" class="fb" href="#">F<span class="abbr66">ace</span>b<span class="abbr66">ook</span></a>
+			<a target="_blank" class="tw" href="#">Tw<span class="abbr66">itter</span></a>
 		</div>
 		<div class="line donde-conseguir">¿Dónde conseguir el número?</div>
 	</footer>

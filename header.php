@@ -11,7 +11,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
 
@@ -117,7 +117,7 @@
 					<div class="contact-item"><b>MAIL: </b>etendlar@fibertel.com.ar</div>
 					<div class="contact-item"><b>TELÉFONO: </b>(+54 11) 4771 1625</div>
 				</div>
-				
+
 				<small>Envíos en formato digital a cualquier parte del mundo previo depósito bancario. </small>
 				<br>
 				<small>Precio actualizado al valor de la última edición más costos administrativos.</small>

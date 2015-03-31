@@ -1171,7 +1171,7 @@ footer.site-footer .flecha {
 
 .site-footer .social {
 	width: 380px;
-	margin-top: 43px;
+	margin-top: 42px;
 	margin-left: 20px;
 	line-height: 24px;
 }
@@ -1432,7 +1432,7 @@ footer.entry-footer .line:before {
 
 .home .offset-pie {
 	position: absolute;
-	margin-top: -90px;
+	margin-top: -100px;
 }
 
 .home .offset-pie footer.entry-footer{
@@ -1598,7 +1598,7 @@ a.flecha:hover,
 
 
 #backdrop .ed-ant .flecha {
-	font-size: 20px;
+	font-size: 30px;
 	border: solid #DAB045;
 	border-width: 1px 0px 1px 0px;
 	margin-bottom: 30px;
@@ -1882,7 +1882,7 @@ a.flecha:hover,
 	}
 
 	article .right {
-		width: 400px;
+		width: 420px;
 		padding-right: 10px;
 	}
 
@@ -1956,7 +1956,7 @@ a.flecha:hover,
 	border: solid #DAB045;
 	border-width: 1px 0;
 	background-color: transparent;
-	font-size: 22px;
+	font-size: 30px;
 	width: 400px;
 
 }
@@ -1977,12 +1977,12 @@ a.flecha:hover,
 .resultados-busqueda .edicion {
 	text-transform: uppercase;
 	clear: both;
-	margin: 18px 0;
+	margin: 36px 0;
 }
 .resultados-busqueda .edicion a > div {
 	display: inline-block;
 	vertical-align: top;
-	width: 300px;
+	width: 330px;
 }
 
 .resultados-busqueda img {
@@ -2011,13 +2011,13 @@ a.flecha:hover,
 .resultados-busqueda span.numero {
 	color: #DAB045;
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 24px;
 }
 
 .resultados-busqueda span.titulo {
 	color: #424242;
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 30px;
 }
 
 body.showing-backdrop {
@@ -2174,6 +2174,10 @@ body.showing-backdrop #backdrop {
 		-webkit-column-rule-width: 25px;
 	}
 
+	.abbr66 {
+		display: none;
+	}
+
 }
 
 #colophon span.abbr-foot {
@@ -2214,4 +2218,19 @@ article span.autor {
 }
 .site-header .paraconseguir {
 	padding-top: 12px;
+}
+
+.buscador .resultcount {
+  font-size: 20px;
+  margin: 2em 0;
+}
+
+
+@media (min-width: 980px) {
+	.site-footer .entrecasa {
+	  float: left;
+	}
+	.site-footer .contacto .contact-item, .site-footer .social a {
+	  line-height: 26px;
+	}
 }

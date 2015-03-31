@@ -38,7 +38,7 @@ function apsi_titulo() {
 
 function apsi_titulo_sinlink() {
 	list($orig, $numero, $titulo) = apsi_split_titulo(the_title_attribute(array('echo' => false)));
-	
+
 	printf('<h1 class="brng entry-title">
 					<span class="brng numero">N°%s</span>
 				<br/>
@@ -199,9 +199,9 @@ function apsi_buscar() {
 	}
 
 	if ($c == 0) { ?>
-		<div>No se encontraron resultados para su búsqueda.</div>
+		<div class="resultcount">No se encontraron resultados para su búsqueda.</div>
 	<?php } else { ?>
-		<div>Encontramos <?php echo $c; ?> resultados para su búsqueda:</div>
+		<div class="resultcount">Encontramos <?php echo $c; ?> resultados para su búsqueda:</div>
 		<div class="ediciones">
 		<?php foreach ($r as $match) {?>
 		<div class="edicion">
