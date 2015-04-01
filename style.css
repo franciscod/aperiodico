@@ -1856,6 +1856,10 @@ a.flecha:hover,
 		height: initial;
 		width: initial;
 	}
+
+	.abbr66 {
+		display: none;
+	}
 }
 
 
@@ -2062,9 +2066,10 @@ body.showing-backdrop #backdrop {
 	.resultados-busqueda .resultado {
 		display: inline-block;
 	}
+
 }
 
-@media (max-width: 660px) {
+@media (max-width: 3px) { /* disabled */
 
 	.iw {
 		width: 100%;

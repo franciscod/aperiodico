@@ -11,11 +11,15 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
-
 <?php wp_head(); ?>
+<script>
+if(navigator.userAgent.match(/iPhone/i)) {
+	$('meta[name=viewport]').attr('content', 'width=device-width, initial-scale=0.47, minimum-scale=0.47');
+}
+</script>
 </head>
 
 <body <?php body_class(); ?>>
