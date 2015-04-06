@@ -1937,6 +1937,12 @@ a.flecha:hover,
 	.site-header h1.site-title {
 		margin-left: 10px;
 	}
+
+	article.category-libro {
+  		padding: 10px 10px;
+		margin-top: 28px;
+		margin-bottom: 28px;
+	}
 }
 
 #fo, #ho {
