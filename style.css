@@ -1737,7 +1737,7 @@ a.flecha:hover,
 	}
 
 	.entry-footer {
-		margin: 36px 50px;
+		margin: 36px 20px;
 	}
 	article.todas {
 		padding-left: 40px;
@@ -2197,6 +2197,8 @@ body.showing-backdrop #backdrop {
 #colophon small {
   font-size: 10px;
   font-variant: small-caps;
+  display: inline-block;
+  line-height: 1.5em;
 }
 
 article span.autor {
