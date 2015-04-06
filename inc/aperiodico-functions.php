@@ -162,7 +162,7 @@ function apsi_buscar() {
 	$c = 0;
 	$ediciones = get_posts(array(
 		'posts_per_page' => -1, // all of them
-		'category' => 'ediciones',
+		'category_name' => 'edicion',
 	));
 
 	foreach ($ediciones as $edicion) {

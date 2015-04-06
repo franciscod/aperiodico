@@ -61,7 +61,7 @@ ga('send', 'pageview');
 		<?php
 		$ultima = get_posts(array(
 			'posts_per_page' => 1,
-			'category' => 'ediciones',
+			'category_name' => 'edicion',
 		));
 		$edicion = $ultima[0];
 		$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID));
@@ -72,7 +72,7 @@ ga('send', 'pageview');
 		<?php
 			$ediciones = get_posts(array(
 				'posts_per_page' => -1, // all of them
-				'category' => 'ediciones',
+				'category_name' => 'edicion',
 			));
 
 			$thumb_urls = array();
