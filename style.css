@@ -2266,3 +2266,15 @@ article.category-libro a.more-link {
 .home  article.category-libro span.titulo {
 	color: #DAB045;
 }
+
+.home article.category-libro .botones {
+	margin: 40px 0;
+}
+
+.category-libro .sumario .art .autor {
+	color: #424242;
+}
+
+.category-libro .sumario .art .item {
+	color: #7A7A7A;
+}

@@ -124,9 +124,12 @@ function apsi_sumario() {
 		<div class="art">
 			<div class="titulo flecha"><?php echo $l[0];?></div>
 			<?php
-			for ($n=1; $n< sizeof($l); $n++) { ?>
-			<div class="autor"><?php echo $l[$n];?></div>
-			<?php
+			for ($n=1; $n< sizeof($l); $n++) {
+				if (substr($l[$n],0,4) == "Por ") {
+					?><div class="autor"><?php echo $l[$n];?></div><?php
+				} else {
+					?><div class="item"><?php echo $l[$n];?></div><?php
+				}
 			}
 			?>
 		</div>
