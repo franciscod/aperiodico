@@ -23,27 +23,48 @@ function apsi_split_titulo($title) {
 	return $matches;
 }
 function apsi_titulo() {
-	list($orig, $numero, $titulo) = apsi_split_titulo(the_title_attribute(array('echo' => false)));
-
 	$link = esc_url( get_permalink());
-	printf('<h1 class="entry-title">
-				<a href="%s" rel="bookmark">
-					<span class="numero">N°%s</span>
-				</a><br/>
-				<a href="%s" rel="bookmark">
-					<span class="titulo">%s</span>
-				</a>
-			</h1>', $link, $numero, $link, $titulo );
+
+	if (in_category("libro")) {
+		printf('<h1 class="entry-title">
+					<a href="%s" rel="bookmark">
+						<span class="numero">Libro</span>
+					</a><br/>
+					<a href="%s" rel="bookmark">
+						<span class="titulo">%s</span>
+					</a>
+				</h1>', $link, $link, the_title_attribute(array('echo' => false)) );
+	} else {
+		list($orig, $numero, $titulo) = apsi_split_titulo(the_title_attribute(array('echo' => false)));
+		printf('<h1 class="entry-title">
+					<a href="%s" rel="bookmark">
+						<span class="numero">N°%s</span>
+					</a><br/>
+					<a href="%s" rel="bookmark">
+						<span class="titulo">%s</span>
+					</a>
+				</h1>', $link, $numero, $link, $titulo );
+	}
+
+
 }
 
 function apsi_titulo_sinlink() {
-	list($orig, $numero, $titulo) = apsi_split_titulo(the_title_attribute(array('echo' => false)));
+	if (in_category("libro")) {
+		printf('<h1 class="brng entry-title">
+						<span class="brng numero">Libro</span>
+					<br/>
+						<span class="brng titulo">%s</span>
+				</h1>', the_title_attribute(array('echo' => false)) );
+	} else {
+		list($orig, $numero, $titulo) = apsi_split_titulo(the_title_attribute(array('echo' => false)));
 
-	printf('<h1 class="brng entry-title">
-					<span class="brng numero">N°%s</span>
-				<br/>
-					<span class="brng titulo">%s</span>
-			</h1>', $numero, $titulo );
+		printf('<h1 class="brng entry-title">
+						<span class="brng numero">N°%s</span>
+					<br/>
+						<span class="brng titulo">%s</span>
+				</h1>', $numero, $titulo );
+	}
 }
 
 function apsi_escriben() {
@@ -102,7 +123,12 @@ function apsi_sumario() {
 		?>
 		<div class="art">
 			<div class="titulo flecha"><?php echo $l[0];?></div>
-			<div class="autor"><?php echo $l[1];?></div>
+			<?php
+			for ($n=1; $n< sizeof($l); $n++) { ?>
+			<div class="autor"><?php echo $l[$n];?></div>
+			<?php
+			}
+			?>
 		</div>
 		<?php
 	}

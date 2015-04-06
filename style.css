@@ -1413,7 +1413,7 @@ article .vcontainer.into:not(.past) .left {
 	top: 10px;
 }
 
-footer.entry-footer .line:before {
+footer.entry-footer .line:before, .more-link:before {
 
 	content: " ";
 	border: 1px solid #DAB045;
@@ -2240,4 +2240,29 @@ article span.autor {
 	.site-footer .contacto .contact-item, .site-footer .social a {
 	  line-height: 26px;
 	}
+}
+
+.home article.category-libro .entry-content {
+  text-transform: none;
+}
+
+article.category-libro a.more-link {
+  display: block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.home article.category-libro {
+  background: white;
+  border: solid #DAB045;
+  border-width: 1px 0;
+}
+
+.home article.category-libro span.numero {
+	color: #424242;
+}
+
+.home  article.category-libro span.titulo {
+	color: #DAB045;
 }

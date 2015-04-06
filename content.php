@@ -18,19 +18,10 @@
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
+				<?php if ( !in_category('libro') ) : ?>
 				<?php apsi_escriben(); ?>
 				<?php apsi_destacados(); ?>
 				<?php apsi_botones(); ?>
-
-				<?php
-					/* translators: %s: Name of current post */
-					/*
-					the_content( sprintf(
-						__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'aperiodico2015' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					) );
-					*/
-				?>
 
 				<?php
 					wp_link_pages( array(
@@ -38,6 +29,10 @@
 						'after'  => '</div>',
 					) );
 				?>
+				<?php else:
+					the_content( "Seguir leyendo");
+
+				endif; ?>
 			</div><!-- .entry-content -->
 
 		</div>
@@ -49,6 +44,8 @@
 			</a>
 		</div>
 		<br style="clear: both;" />
+		<?php if ( !in_category('libro') ) : ?>
 		<div class="offset-pie"><?php apsi_pie_post(); ?></div>
+		<?php endif; ?>
 	</div>
 </article><!-- #post-## -->
