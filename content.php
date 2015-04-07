@@ -40,7 +40,14 @@
 		<div class="left">
 			<a href="<?php echo esc_url( get_permalink()); ?>">
 				<div class="thumb">
+					<?php if ( !in_category('libro') ) : ?>
 					<?php the_post_thumbnail('full'); ?>
+					<?php else:
+						$thumb_data = wp_get_attachment_image_src(get_post_thumbnail_id($edicion->ID));
+						$thumb_url = $thumb_data[0];
+						?>
+						<div class="imgcontainer"><div class="img" style="background-image: url('<?php echo $thumb_url; ?>')"></div></div><?php
+					endif; ?>
 				</div>
 			</a>
 		</div>

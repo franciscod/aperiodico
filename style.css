@@ -1507,7 +1507,8 @@ a.flecha,
 .navtoggle,
 .todas .edicion img,
 .todas .edicion div,
-.entrecasa
+.entrecasa,
+.imgcontainer
 {
 	-webkit-transition: 400ms all ease;
 	transition: 400ms all ease;
@@ -1521,7 +1522,8 @@ a.flecha:hover,
 .navtoggle:hover,
 .todas .edicion img:hover,
 .todas .edicion div:hover,
-.entrecasa:hover
+.entrecasa:hover,
+.imgcontainer:hover
 {
 	opacity: 0.6;
 	cursor: pointer;
@@ -1937,12 +1939,6 @@ a.flecha:hover,
 	.site-header h1.site-title {
 		margin-left: 10px;
 	}
-
-	article.category-libro {
-  		padding: 10px 10px;
-		margin-top: 28px;
-		margin-bottom: 28px;
-	}
 }
 
 #fo, #ho {
@@ -2283,4 +2279,17 @@ article.category-libro a.more-link {
 
 .category-libro .sumario .art .item {
 	color: #7A7A7A;
+}
+
+.category-libro .imgcontainer {
+	width: 460px;
+	height: 420px;
+	display: inline-block;
+}
+.category-libro .imgcontainer .img {
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
