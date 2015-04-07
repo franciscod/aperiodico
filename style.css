@@ -2259,6 +2259,7 @@ article.category-libro a.more-link {
   background: white;
   border: solid #DAB045;
   border-width: 1px 0;
+  padding-top: 60px;
 }
 
 .home article.category-libro span.numero {
