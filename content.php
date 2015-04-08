@@ -31,7 +31,7 @@
 				?>
 				<?php else:
 					the_content( "Seguir leyendo");
-					apsi_botones();
+//					apsi_botones();
 
 				endif; ?>
 			</div><!-- .entry-content -->
@@ -52,6 +52,11 @@
 			</a>
 		</div>
 		<br style="clear: both;" />
-		<div class="offset-pie"><?php apsi_pie_post(); ?></div>
+		<div class="offset-pie">
+			<?php if ( !in_category('libro') ) :
+				apsi_pie_post();
+			endif; 
+			?>
+			</div>
 	</div>
 </article><!-- #post-## -->

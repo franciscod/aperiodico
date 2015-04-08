@@ -1,4 +1,4 @@
-/*
+	/*
 Theme Name: Aperiodico Psicoanalitico 2015
 Theme URI: https://github.com/franciscod/aperiodico
 Author: Francisco Demartino, para Entrecasa
@@ -2286,6 +2286,9 @@ article.category-libro a.more-link {
 	width: 460px;
 	height: 420px;
 	display: inline-block;
+	background-color: #FBF7EC;
+	margin-left: 40px;
+	padding: 10px;
 }
 .category-libro .imgcontainer .img {
 	width: 100%;
@@ -2293,4 +2296,25 @@ article.category-libro a.more-link {
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+@media (min-width: 980px) and (max-width: 1280px) {
+
+	.home article.category-libro h1.entry-title {
+		width: 380px;
+	}
+
+	.home article.category-libro .right {
+		padding-bottom: 0px;
+	}
+}
+
+@media (min-width: 1280px) {
+
+	.home article.category-libro {
+		padding-left: 0px;
+		margin-left: 80px;
+		margin-right: 80px;
+		padding-right: 0px;
+	}
 }
