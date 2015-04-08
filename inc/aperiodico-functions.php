@@ -17,6 +17,10 @@ function splitlines($string) {
 }
 
 function apsi_split_titulo($title) {
+	if (in_category("libro")) {
+		return array("", "Libro", $title);
+	}
+
 	$re = "/(\d+): (.*)/";
 	$matches = array();
 	preg_match($re, $title, $matches);
