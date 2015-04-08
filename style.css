@@ -1001,7 +1001,7 @@ article {
 	width: initial;
 	float: none;
 	margin-left: 175px;
-	margin-top: 36px;
+	margin-top: 40px;
 	position: relative;
 	letter-spacing: 1px;
 }
@@ -1149,7 +1149,7 @@ footer.site-footer .flecha {
 
 .site-header .ed-ant,
 .site-footer .ed-ant {
-	width: 380px;
+	width: 420px;
 	margin-left: 90px;
 }
 
@@ -1160,7 +1160,7 @@ footer.site-footer .flecha {
 
 .site-footer .contacto {
 	width: 220px;
-	margin-left: 100px;
+	margin-left: 60px;
 }
 
 .site-header .social {
@@ -2201,6 +2201,7 @@ body.showing-backdrop #backdrop {
   font-variant: small-caps;
   display: inline-block;
   line-height: 1.5em;
+  padding-top:10px
 }
 
 article span.autor {
@@ -2246,6 +2247,12 @@ article span.autor {
 
 .home article.category-libro .entry-content {
   text-transform: none;
+  margin-right: 40px;
+	line-height: 2em;
+}
+
+.home article.category-libro .entry-title {
+  margin-bottom: 24px;
 }
 
 article.category-libro a.more-link {
@@ -2253,6 +2260,7 @@ article.category-libro a.more-link {
   margin-top: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
+	line-height: initial;
 }
 
 .home article.category-libro {
@@ -2260,6 +2268,7 @@ article.category-libro a.more-link {
   border: solid #DAB045;
   border-width: 1px 0;
   padding-top: 60px;
+padding-bottom: 20px;
 }
 
 .home article.category-libro span.numero {
@@ -2307,6 +2316,10 @@ article.category-libro a.more-link {
 	.home article.category-libro .right {
 		padding-bottom: 0px;
 	}
+
+	#colophon small {
+	  font-size: 9px;
+    }
 }
 
 @media (min-width: 1280px) {
